@@ -1,3 +1,5 @@
+/* For the header */
+
 body {
     display: flex;
     flex-direction: column;
@@ -12,12 +14,35 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 75px;
     border-bottom: 1px solid black;
 }
 
 header > h1 {
+    font-size: 36px;
+    margin: 0px;
+    padding-top: 36px;
+    padding-left: 5px;
+}
+
+header > nav {
+    padding-right: 5px;
+    padding-top: 44px;
+}
+
+header > nav > a {
+    font-size: 28px;
+    color: black;
+    text-decoration: none;
+    margin: 0px 5px 0px 5px;
 }
 
 .current {
-    color: green;
+    color: blue;
+}
+
+/* For the main content */
+
+.main {
+    padding: 5px;
 }
