@@ -18,7 +18,15 @@ header {
     border-bottom: 1px solid black;
 }
 
-header > h1 {
+header > a {
+    all: unset;
+}
+
+header > a:hover {
+    cursor: pointer;
+}
+
+header > a > h1 {
     font-size: 36px;
     margin: 0px;
     padding-top: 36px;
