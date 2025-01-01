@@ -11,8 +11,13 @@
         <h1>{{ page.note_title }}</h1>
         <h2>By: {{ page.author }}</h2>
       </header>
+      <a id="note-top"></a>
       <div class="main">
         {{ content }}
+      </div>
+      <div class="bottom-button-wrapper">
+        <a class="control-button" href="/notes.html">Back to notes</a>
+        <a class="control-button" href="#top">Back to top</a>
       </div>
     </div>
   </body>
