@@ -16,3 +16,26 @@
     flex: auto;
     justify-content: space-evenly;
 }
+
+/* Current work section */
+#current-work {
+    display: flex;
+}
+
+.work-column {
+    flex: 1;
+}
+
+.work-column > p {
+    margin: 0;
+}
+
+.work-column > p > a {
+    color: unset;
+    text-decoration: none;
+}
+
+.work-column > ul > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
