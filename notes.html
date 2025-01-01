@@ -21,7 +21,9 @@ title: Notes
     <section>
         <h2>Here's the notes</h2>
         <ul class="notes-list">
-            <li><a href="/notes/HoML.html">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow by Aurélien Géron</a></li>
+            {% for note in site.data.notes %} 
+                <li><a href="{{ note.link }}">{{ note.title }} by {{ note.author }}</a></li>
+            {% endfor %}
         </ul>
     </section>
 </div>
