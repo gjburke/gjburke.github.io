@@ -1,7 +1,44 @@
 ---
-title: Griffin's Stuff
+title: Home 
 layout: default
+email: gjburke2@illinois.edu
 ---
-
-<h1>Hello World!</h1>
-<p>This is {{ page.title }}</p>
+<div class="home-container">
+    <section>
+        <p>
+            I'm building this site for me, but if you happen to not be me and are on this site, 
+            hello! Welcome!
+        </p>
+        <p>
+            My name is Griffin Burke, I am currently a sophomore at the 
+            University of Illinois studying Computer Science with a Minor in Mathematics
+            (and possibly Data Science too, we'll see) and an interest in quantum computing.
+        </p>
+        <p>
+            I'm interested in a lot of things and am still exploring many aspects of computer science.
+            However, I've found myself drawn to the ML/AI/Data Science aspects of computer science
+            recently. General topics of interest in that area would be:
+        </p>
+        <ul>
+            <li><b>ML/AI Engineering</b>: Building, training, tuning, and maintaining models </li>
+            <li><b>Data Science/Engineering</b>: Working with, modeling large and complex datasets</li>
+            <li><b>MLOps</b>: Designing, implementing, maintaining ML/AI/Data pipelines</li>
+            <li><b>Software Engineering</b>: with a focus on implementing AI/ML models into software</li>
+        </ul>
+        <p>
+            Right now I'm learning and gaining experience with more rigor in Machine Learning Engineering
+            (assuring proper documentation, using pipelines for proper data handling, generally more 
+            methodical work). I'd like to gain more expereince in those things, as well as what goes into 
+            deploying an ML/AI model (MLOps and backend pipelines, but also within the front end of the software).
+        </p>
+        <p>So yeah, that's a little about me. If you want to want to get to know me more, my email is {{ page.email }}.</p>
+        <p id="resume-container">
+            <span>Oh and if you're a recruiter, here are my resumes:</span>
+            <span id="resumes"> 
+                <a href="assets\images\Griffin_Burke_SWE_Resume.pdf" target="_blank">Software</a> 
+                <a href="assets\images\Griffin_Burke_ML_Resume.pdf" target="_blank">ML/AI</a> 
+                <a href="assets\images\Griffin_Burke_Data_Resume.pdf" target="_blank">Data</a>
+            </span>
+        </p>
+    </section>
+</div>

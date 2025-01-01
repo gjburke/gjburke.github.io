@@ -1,0 +1,14 @@
+.home-container {
+    margin-top: 20px;
+}
+
+#resume-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#resumes {
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
+}
