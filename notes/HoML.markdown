@@ -5,52 +5,90 @@ note_title: Hands on Machine Learning
 author: Aurélien Géron 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna elit, hendrerit in tortor tristique, iaculis consectetur libero. Phasellus facilisis risus non tellus tempor, eget sodales quam lacinia. Integer vel aliquam lectus, vitae volutpat sem. Pellentesque fermentum dignissim mattis. Fusce in arcu ac massa elementum porta. Vivamus ut eleifend velit, vitae feugiat nulla. Sed non finibus ipsum. Aenean et augue sed nunc ornare luctus. Fusce massa risus, sagittis quis pretium vel, porta non massa. Nullam interdum tortor feugiat porta tincidunt.
+# Table of Contents
 
-Integer pharetra velit enim, nec ullamcorper nisi scelerisque eget. Nullam sollicitudin quam sed leo blandit lacinia. Vivamus quis odio at ex tincidunt molestie id in felis. Praesent tristique luctus molestie. Duis non hendrerit neque, ac bibendum lacus. Integer non finibus orci. Maecenas vestibulum tellus eu elementum porta. Aenean quis magna mi. Duis augue quam, mollis a nisl a, mollis tincidunt lorem. Mauris imperdiet tempor odio et feugiat. Curabitur mattis viverra ex ac facilisis. Quisque fermentum ante odio, sit amet semper nisl mollis id. Maecenas ornare nunc urna, non blandit nisi fringilla vitae. Phasellus tincidunt lacus vitae erat tristique rutrum.
+1. [The Machine Learning Landscape](#the-machine-learning-landscape)
+2. [End to End Machine Learning Project](#end-to-end-machine-learning-project)
 
-Etiam ornare libero blandit ipsum dignissim semper. In hac habitasse platea dictumst. Vivamus eu dolor et felis luctus maximus. Quisque massa tellus, scelerisque in lobortis et, pellentesque ac odio. In lacus lorem, sodales vitae lectus id, aliquam iaculis odio. Curabitur at augue sit amet est egestas sagittis. Nunc sit amet rutrum massa.
+# The Machine Learning Landscape
 
-Donec lacinia sollicitudin tortor nec eleifend. Donec semper sagittis lacus. Phasellus ac facilisis ipsum, non placerat massa. Praesent sit amet lorem mattis, scelerisque diam a, placerat nisi. Praesent sed elit ante. Maecenas maximus feugiat purus. Nullam auctor leo odio, nec consequat nulla tincidunt in. Quisque quis tortor lobortis, rutrum elit a, tempor nisl.
+What is... Machine Learning?
+- giving the ability of computers to "learn" from data
+- performance increases after being a piece (or set) of data
+Why use it?
+- can be better for tasks that require automation, if there's no known algorithm, complex data
 
-Quisque aliquet vestibulum posuere. Etiam elementum egestas erat, in aliquet nisi hendrerit at. Suspendisse ipsum libero, vehicula nec diam sit amet, iaculis ullamcorper libero. Pellentesque dignissim varius vestibulum. Integer feugiat risus in massa aliquam, sed malesuada elit imperdiet. Cras tempor viverra facilisis. Nunc in dignissim felis. Fusce sit amet pharetra est. Maecenas sed metus aliquam, tristique nunc in, ornare mi. Morbi mauris eros, consequat ac porttitor eu, vehicula ut augue. Curabitur tellus orci, tincidunt quis venenatis a, interdum eget orci. Vestibulum lobortis sem nec erat consequat, ut scelerisque sapien varius. Curabitur iaculis mi in consequat iaculis. Mauris efficitur ex vitae neque malesuada commodo. Morbi rutrum consequat tortor in venenatis. Suspendisse vulputate gravida consectetur.
+## Types of ML Systems
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna elit, hendrerit in tortor tristique, iaculis consectetur libero. Phasellus facilisis risus non tellus tempor, eget sodales quam lacinia. Integer vel aliquam lectus, vitae volutpat sem. Pellentesque fermentum dignissim mattis. Fusce in arcu ac massa elementum porta. Vivamus ut eleifend velit, vitae feugiat nulla. Sed non finibus ipsum. Aenean et augue sed nunc ornare luctus. Fusce massa risus, sagittis quis pretium vel, porta non massa. Nullam interdum tortor feugiat porta tincidunt.
+**Supervised** vs **Unsupervised**
 
-Integer pharetra velit enim, nec ullamcorper nisi scelerisque eget. Nullam sollicitudin quam sed leo blandit lacinia. Vivamus quis odio at ex tincidunt molestie id in felis. Praesent tristique luctus molestie. Duis non hendrerit neque, ac bibendum lacus. Integer non finibus orci. Maecenas vestibulum tellus eu elementum porta. Aenean quis magna mi. Duis augue quam, mollis a nisl a, mollis tincidunt lorem. Mauris imperdiet tempor odio et feugiat. Curabitur mattis viverra ex ac facilisis. Quisque fermentum ante odio, sit amet semper nisl mollis id. Maecenas ornare nunc urna, non blandit nisi fringilla vitae. Phasellus tincidunt lacus vitae erat tristique rutrum.
+>Supervised:
+>- labelled w/ desired solutions
+>- ex: classifciation, predictors. regression algs and extensions, k neareast neighbors, decision tree, rand forest
 
-Etiam ornare libero blandit ipsum dignissim semper. In hac habitasse platea dictumst. Vivamus eu dolor et felis luctus maximus. Quisque massa tellus, scelerisque in lobortis et, pellentesque ac odio. In lacus lorem, sodales vitae lectus id, aliquam iaculis odio. Curabitur at augue sit amet est egestas sagittis. Nunc sit amet rutrum massa.
+>Unsupervised:
+>- Data is unlabelled 
+>- ex: clustering, anomaly/novelty detection, visualizations & dimension reduction, association
 
-Donec lacinia sollicitudin tortor nec eleifend. Donec semper sagittis lacus. Phasellus ac facilisis ipsum, non placerat massa. Praesent sit amet lorem mattis, scelerisque diam a, placerat nisi. Praesent sed elit ante. Maecenas maximus feugiat purus. Nullam auctor leo odio, nec consequat nulla tincidunt in. Quisque quis tortor lobortis, rutrum elit a, tempor nisl.
+>Semisupervised: have some labelled data in a lot of unlabelled data, often used to better identify classes in clustering
 
-Quisque aliquet vestibulum posuere. Etiam elementum egestas erat, in aliquet nisi hendrerit at. Suspendisse ipsum libero, vehicula nec diam sit amet, iaculis ullamcorper libero. Pellentesque dignissim varius vestibulum. Integer feugiat risus in massa aliquam, sed malesuada elit imperdiet. Cras tempor viverra facilisis. Nunc in dignissim felis. Fusce sit amet pharetra est. Maecenas sed metus aliquam, tristique nunc in, ornare mi. Morbi mauris eros, consequat ac porttitor eu, vehicula ut augue. Curabitur tellus orci, tincidunt quis venenatis a, interdum eget orci. Vestibulum lobortis sem nec erat consequat, ut scelerisque sapien varius. Curabitur iaculis mi in consequat iaculis. Mauris efficitur ex vitae neque malesuada commodo. Morbi rutrum consequat tortor in venenatis. Suspendisse vulputate gravida consectetur.
+>Reinforcement: some sort of "reward" mechanism to "teach" the algorithm the proper output
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna elit, hendrerit in tortor tristique, iaculis consectetur libero. Phasellus facilisis risus non tellus tempor, eget sodales quam lacinia. Integer vel aliquam lectus, vitae volutpat sem. Pellentesque fermentum dignissim mattis. Fusce in arcu ac massa elementum porta. Vivamus ut eleifend velit, vitae feugiat nulla. Sed non finibus ipsum. Aenean et augue sed nunc ornare luctus. Fusce massa risus, sagittis quis pretium vel, porta non massa. Nullam interdum tortor feugiat porta tincidunt.
+**Batch** and **Online Learning**
 
-Integer pharetra velit enim, nec ullamcorper nisi scelerisque eget. Nullam sollicitudin quam sed leo blandit lacinia. Vivamus quis odio at ex tincidunt molestie id in felis. Praesent tristique luctus molestie. Duis non hendrerit neque, ac bibendum lacus. Integer non finibus orci. Maecenas vestibulum tellus eu elementum porta. Aenean quis magna mi. Duis augue quam, mollis a nisl a, mollis tincidunt lorem. Mauris imperdiet tempor odio et feugiat. Curabitur mattis viverra ex ac facilisis. Quisque fermentum ante odio, sit amet semper nisl mollis id. Maecenas ornare nunc urna, non blandit nisi fringilla vitae. Phasellus tincidunt lacus vitae erat tristique rutrum.
+>Batch:
+>- system trained with all data at once, then deployed ("offline learning")
+>- can be really resource intensive, taking a while and lot of computer to train
+>- usually we cant incremental learning
 
-Etiam ornare libero blandit ipsum dignissim semper. In hac habitasse platea dictumst. Vivamus eu dolor et felis luctus maximus. Quisque massa tellus, scelerisque in lobortis et, pellentesque ac odio. In lacus lorem, sodales vitae lectus id, aliquam iaculis odio. Curabitur at augue sit amet est egestas sagittis. Nunc sit amet rutrum massa.
+>Online Learning
+>- trained incrementally in 'mini-batches'
+>- adapts to the new data on the fly, great for continuous flow
+>- learning rate controls that increment 
+>- need to be aware of new, data data that might decrease the performance
 
-Donec lacinia sollicitudin tortor nec eleifend. Donec semper sagittis lacus. Phasellus ac facilisis ipsum, non placerat massa. Praesent sit amet lorem mattis, scelerisque diam a, placerat nisi. Praesent sed elit ante. Maecenas maximus feugiat purus. Nullam auctor leo odio, nec consequat nulla tincidunt in. Quisque quis tortor lobortis, rutrum elit a, tempor nisl.
+**Instance** vs. **Model-based**
 
-Quisque aliquet vestibulum posuere. Etiam elementum egestas erat, in aliquet nisi hendrerit at. Suspendisse ipsum libero, vehicula nec diam sit amet, iaculis ullamcorper libero. Pellentesque dignissim varius vestibulum. Integer feugiat risus in massa aliquam, sed malesuada elit imperdiet. Cras tempor viverra facilisis. Nunc in dignissim felis. Fusce sit amet pharetra est. Maecenas sed metus aliquam, tristique nunc in, ornare mi. Morbi mauris eros, consequat ac porttitor eu, vehicula ut augue. Curabitur tellus orci, tincidunt quis venenatis a, interdum eget orci. Vestibulum lobortis sem nec erat consequat, ut scelerisque sapien varius. Curabitur iaculis mi in consequat iaculis. Mauris efficitur ex vitae neque malesuada commodo. Morbi rutrum consequat tortor in venenatis. Suspendisse vulputate gravida consectetur.
+>Instance
+>- model generalizes by comparing new data to "learned" data
+>- something like KNN, onyl really compares to data in set
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna elit, hendrerit in tortor tristique, iaculis consectetur libero. Phasellus facilisis risus non tellus tempor, eget sodales quam lacinia. Integer vel aliquam lectus, vitae volutpat sem. Pellentesque fermentum dignissim mattis. Fusce in arcu ac massa elementum porta. Vivamus ut eleifend velit, vitae feugiat nulla. Sed non finibus ipsum. Aenean et augue sed nunc ornare luctus. Fusce massa risus, sagittis quis pretium vel, porta non massa. Nullam interdum tortor feugiat porta tincidunt.
+>Model-based
+>- model makes predictions that fit the training data (separate from data)
+>- For devs: study data, select model, train it, apply to make predicitons
 
-Integer pharetra velit enim, nec ullamcorper nisi scelerisque eget. Nullam sollicitudin quam sed leo blandit lacinia. Vivamus quis odio at ex tincidunt molestie id in felis. Praesent tristique luctus molestie. Duis non hendrerit neque, ac bibendum lacus. Integer non finibus orci. Maecenas vestibulum tellus eu elementum porta. Aenean quis magna mi. Duis augue quam, mollis a nisl a, mollis tincidunt lorem. Mauris imperdiet tempor odio et feugiat. Curabitur mattis viverra ex ac facilisis. Quisque fermentum ante odio, sit amet semper nisl mollis id. Maecenas ornare nunc urna, non blandit nisi fringilla vitae. Phasellus tincidunt lacus vitae erat tristique rutrum.
+## Main Challenges in Machine Learning
 
-Etiam ornare libero blandit ipsum dignissim semper. In hac habitasse platea dictumst. Vivamus eu dolor et felis luctus maximus. Quisque massa tellus, scelerisque in lobortis et, pellentesque ac odio. In lacus lorem, sodales vitae lectus id, aliquam iaculis odio. Curabitur at augue sit amet est egestas sagittis. Nunc sit amet rutrum massa.
+- Not enough training data
+  - more data is almost always better (as long as its good quality)
+- Non-representative training data
+- Poor quality training data
+  - some outliers, missing a few features
+- Irrelevant features
+  - need to make sure of good feature selection and extraction
+- Overfitting the training data
+  - size of dataset should correlate with model complexity
+  - model that can capture intricacies will find them in noise
+  - to fix, you can try:
+    - simplifying the model
+    - getting more trainign data
+    - reducing the dataset noise
+- Underfitting
+  - model is not strong enough
+  - need to...
+    - set a more powerful model
+    - get better features
+    - less constraint/regularization
 
-Donec lacinia sollicitudin tortor nec eleifend. Donec semper sagittis lacus. Phasellus ac facilisis ipsum, non placerat massa. Praesent sit amet lorem mattis, scelerisque diam a, placerat nisi. Praesent sed elit ante. Maecenas maximus feugiat purus. Nullam auctor leo odio, nec consequat nulla tincidunt in. Quisque quis tortor lobortis, rutrum elit a, tempor nisl.
+## Testing and Validating
 
-Quisque aliquet vestibulum posuere. Etiam elementum egestas erat, in aliquet nisi hendrerit at. Suspendisse ipsum libero, vehicula nec diam sit amet, iaculis ullamcorper libero. Pellentesque dignissim varius vestibulum. Integer feugiat risus in massa aliquam, sed malesuada elit imperdiet. Cras tempor viverra facilisis. Nunc in dignissim felis. Fusce sit amet pharetra est. Maecenas sed metus aliquam, tristique nunc in, ornare mi. Morbi mauris eros, consequat ac porttitor eu, vehicula ut augue. Curabitur tellus orci, tincidunt quis venenatis a, interdum eget orci. Vestibulum lobortis sem nec erat consequat, ut scelerisque sapien varius. Curabitur iaculis mi in consequat iaculis. Mauris efficitur ex vitae neque malesuada commodo. Morbi rutrum consequat tortor in venenatis. Suspendisse vulputate gravida consectetur.
+>Need to split set into test and train to make sure model is generalizing
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna elit, hendrerit in tortor tristique, iaculis consectetur libero. Phasellus facilisis risus non tellus tempor, eget sodales quam lacinia. Integer vel aliquam lectus, vitae volutpat sem. Pellentesque fermentum dignissim mattis. Fusce in arcu ac massa elementum porta. Vivamus ut eleifend velit, vitae feugiat nulla. Sed non finibus ipsum. Aenean et augue sed nunc ornare luctus. Fusce massa risus, sagittis quis pretium vel, porta non massa. Nullam interdum tortor feugiat porta tincidunt.
+>For model selection and tuning, need to also generalize past a particular test set
+>- holdout validation - take part of a training set, evaluate multiple models, choose the best
+>- cross validation - test on many, smaller validation tests
 
-Integer pharetra velit enim, nec ullamcorper nisi scelerisque eget. Nullam sollicitudin quam sed leo blandit lacinia. Vivamus quis odio at ex tincidunt molestie id in felis. Praesent tristique luctus molestie. Duis non hendrerit neque, ac bibendum lacus. Integer non finibus orci. Maecenas vestibulum tellus eu elementum porta. Aenean quis magna mi. Duis augue quam, mollis a nisl a, mollis tincidunt lorem. Mauris imperdiet tempor odio et feugiat. Curabitur mattis viverra ex ac facilisis. Quisque fermentum ante odio, sit amet semper nisl mollis id. Maecenas ornare nunc urna, non blandit nisi fringilla vitae. Phasellus tincidunt lacus vitae erat tristique rutrum.
+>Watch out for data mistmatch, where your testing set may be too similar to the training and not generalized enough for the problem at hand
+>- may want to get even more general validation set
 
-Etiam ornare libero blandit ipsum dignissim semper. In hac habitasse platea dictumst. Vivamus eu dolor et felis luctus maximus. Quisque massa tellus, scelerisque in lobortis et, pellentesque ac odio. In lacus lorem, sodales vitae lectus id, aliquam iaculis odio. Curabitur at augue sit amet est egestas sagittis. Nunc sit amet rutrum massa.
-
-Donec lacinia sollicitudin tortor nec eleifend. Donec semper sagittis lacus. Phasellus ac facilisis ipsum, non placerat massa. Praesent sit amet lorem mattis, scelerisque diam a, placerat nisi. Praesent sed elit ante. Maecenas maximus feugiat purus. Nullam auctor leo odio, nec consequat nulla tincidunt in. Quisque quis tortor lobortis, rutrum elit a, tempor nisl.
-
-Quisque aliquet vestibulum posuere. Etiam elementum egestas erat, in aliquet nisi hendrerit at. Suspendisse ipsum libero, vehicula nec diam sit amet, iaculis ullamcorper libero. Pellentesque dignissim varius vestibulum. Integer feugiat risus in massa aliquam, sed malesuada elit imperdiet. Cras tempor viverra facilisis. Nunc in dignissim felis. Fusce sit amet pharetra est. Maecenas sed metus aliquam, tristique nunc in, ornare mi. Morbi mauris eros, consequat ac porttitor eu, vehicula ut augue. Curabitur tellus orci, tincidunt quis venenatis a, interdum eget orci. Vestibulum lobortis sem nec erat consequat, ut scelerisque sapien varius. Curabitur iaculis mi in consequat iaculis. Mauris efficitur ex vitae neque malesuada commodo. Morbi rutrum consequat tortor in venenatis. Suspendisse vulputate gravida consectetur.
+# End to End Machine Learning Project
