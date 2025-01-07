@@ -186,4 +186,49 @@ This involves...
 
 ## Binary Classification
 
-Basically a 
+Basically a yes or no question, is something or isn't, etc.
+
+### Performace Measures
+
+Confusion Matrix
+
+- tells you FP, FN, TP, TN of predictions
+- rows are the actual class, cols are the predictors
+
+>From this, you can determine:
+
+>- <u>precision</u> - accuracy of the positive predictions - TP / (TP+FP) or TP / Total Positive Predictions
+>- <u>recall/sensitivity</u> - ratio of positives detected by classifier - TP / (TP + FN) or TP / Total Actual Positives
+>- <u>F1 Score</u> - harmonic mean of precision and recall - 2 * (precision * recall )/(precision + recall)
+
+Precision/Recall Tradeoff
+
+- Increasing precision reduces recall, and vice versa
+- kind of looks like this:
+  - ![Threshold vs. PR values graph](\assets\images\for-notes\pr-threshold.png)
+- Or with a PR Curve, where we want to be close to the top right
+  - ![PR Curve](\assets\images\for-notes\pr-curve.png)
+
+The ROC Curve
+
+- Similar to the PR Curve, but plots true positive rate against the false positive rate
+- True positive = recall/sensitivity, false positive = 1 - TNR = specificity
+- ![ROC Curve](\assets\images\for-notes\roc-curve.png)
+  - want it to be as close to top left as possible
+
+When choosing, we prefer PR when positive class is rare or when you care more about false positive than false negatives, and ROC curve otherwise.
+
+## Multiclass Classification
+
+Some algorithms support this intrinsically, others don't
+
+With the ones that don't, use:
+- one vs. all: train classifier for each class, pick one with the highest chance of being that class
+- one v. one: train classifier for each pair of classes, compare and see most likely
+
+## Error Analysis
+
+- Use confusion matrix to gain insights
+- Modify dataset, model, training approach,etc. based on insights
+
+
