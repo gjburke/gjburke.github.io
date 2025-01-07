@@ -1,0 +1,23 @@
+---
+layout: default
+title: Notes
+---
+
+<div class="journal-container">
+    <section>
+        <p>
+            This is where I'm going to talk about what I've done for the day, what I've learned, etc.
+            Hopefully with time, I can become better at reflecting on my code, how I have grown, and how 
+            I can grow more. The ability to reflect and grow from the challenges of each day is something
+            that I want to continue working on.
+        </p>
+    </section>
+    <h2>Journal</h2>
+    <section>
+        <ul class="journal-entries">
+            {% for entry in site.data.journal %} 
+                <li><a href="{{ entry.link }}">{{ entry.date }} - {{ entry.title }} </a></li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>

@@ -1,0 +1,59 @@
+/* OVERALL NOTE CONTENT*/
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    align-self: center;
+    width: 750px;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75px;
+    border-bottom: 1px solid black;
+}
+
+/* Header Title */
+
+header > h1 {
+    font-size: 28px;
+    margin: 0px;
+    padding-top: 42px;
+    padding-left: 5px;
+}
+
+header > h2 {
+    font-size: 18px;
+    margin: 0px;
+    padding-top: 52px;
+    padding-left: 5px;
+}
+
+/* Back Button */
+.control-button {
+    padding: 1px 6px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+}
+.bottom-button-wrapper {
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%);
+}
+
+/* Main content */
+
+.main {
+    padding: 5px;
+}
