@@ -9,6 +9,7 @@ author: Aurélien Géron
 
 1. [The Machine Learning Landscape](#the-machine-learning-landscape)
 2. [End to End Machine Learning Project](#end-to-end-machine-learning-project)
+3. [Classification](#classification)
 
 # The Machine Learning Landscape
 
@@ -92,3 +93,97 @@ Why use it?
 >- may want to get even more general validation set
 
 # End to End Machine Learning Project
+
+Overall, looks like:
+1. [Look at the big picture](#looking-at-the-big-picture)
+2. [Get the data](#get-the-data)
+3. [Discover, visualize data to gain insights](#discover-and-visualize-data-to-gain-insights)
+4. [Prepare the data for ML algorithms](#prepare-the-data-for-ml-algorithms)
+5. [Select and train a model](#select-and-traing-a-model)
+6. [Fine tune it](#fine-tune-a-model)
+7. [Present your solution](#present-your-solution)
+8. [Launch, monitor, maintain the model](#launch-monitor-maintain)
+
+## Look at the big picture
+
+- Find exactly what the business objective is (determines how you frome the problem, algs, performance measure, etc)
+- How the model situated within pipelines
+
+>Steps:
+>- Frame the problem (unsupervised vs supervised, regression, classifcation, etc)
+>- Select performance measure (RSME, MAE, other error or success measures)
+>- Check your assumptions (about the business side, what data you'll have, what you actually need to do)
+
+## Get the data
+
+- create workspace, download data, look at data structure
+- then do some preliminary analysis/visualizations
+- create a test set (DONT LOOK!) with good random and representative sampling methods
+
+## Discover and visualize data to gain insights
+
+Don't include the test data!
+Visualize, play around with, analyze:
+- different features, distibutions
+- looking at feature correlations
+- attribute combinations
+
+## Prepare the data for ML algorithms
+
+Write functions for this! (can use scikit learn pipelining for this)
+
+Data cleaning
+- deal with missing features: get rid of datapoint, whole attribute, or set to some mean or specific value
+
+Handling text or categorical data
+- usually set to some numerical or vector representation
+- one Hot Encoding as a vector representation, but can be large if many options
+
+Feature scaling
+- need features to have similar range of values
+- min-max scaling (normalization): shifted and rescaled to one
+- standardization: subtract mean val, divide by standard deviation <- less affected by outliers
+
+Custom transformers, transformation pipelines
+- can use scikit-learn to automate certain dta transformations (data cleaning, handling non-numerics, feature scaling, etc)
+- use customeTransformer class for this
+- can put the custom transformer into transformtation pipelines to stack them, automate data cleaning
+
+## Select and traing a model
+
+Don't touch test set until confident with a model, but you may want to use a smaller training validation set, or do cross-validation.
+
+Train a variety of models, evaluate under/over fitting and such, go from there
+
+## Fine-tune a model
+
+- grid search, randomized search, others
+- meant to find the best hyperparameters
+- once you think you've found your best, evaluate the final model on the test set (usually will be worse than corss-val, especially if hypertuned a lot. BUT DON'T RETUNE)
+
+## Present your solution
+
+This is the business aspect of things, so remember that not everyone understand machine learning
+
+Should include things like:
+- Recommendations on implementation of your model
+- Good documentation for your model, reports, etc
+- Showing the clear impact of your model (layman should understand at least the important parts, may have different presentations for different knowledge bases)
+- Overall good communication (keep each audience in mind)
+
+As stressed in some of the bullets, keep your audience in mind. If you are presenting your solution to the finance department vs the models department, you may need to use different terminology and explain to different levels of knowledge about models. But your impact should be clear to everyone.
+
+## Launch, Monitor, Maintain
+
+This involves...
+- Plugging it into the pipeline
+- Tests for the model's performance (trying to stop rot)
+- Some sort of human evaluation and checking for the model's inputs and output within the pipeline
+- Evualtion of the new input data to the model (prevent bad data)
+- Retrain models on a regular basis (automate as much as possible)
+
+# Classification
+
+## Binary Classification
+
+Basically a 
