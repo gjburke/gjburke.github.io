@@ -5,12 +5,21 @@ note_title: Hands on Machine Learning
 author: Aurélien Géron 
 ---
 
+# Forward (on the notes)
+
+Just for some conext for someone who isn't me...
+
+These are notes that are copied from my hand-written notes that I've already taken. I'm not a big fan of computer notes, especially because I like to flex my organization and things on tge page when writing, in a way that's too cumbersome to replicate on screen. So please bear with me while I try and find a nice way to structure everything with markdown. I want these notes so I can access them anywhere. They are a more stripped version of my hand-written notes, so if these are sparse (especially of equations) just know that they are probably written elsewhere, it was probably just annoying to type it.
+
+Alright, now on with the notes!
+
 # Table of Contents
 
 1. [The Machine Learning Landscape](#the-machine-learning-landscape)
 2. [End to End Machine Learning Project](#end-to-end-machine-learning-project)
 3. [Classification](#classification)
 4. [Training Models](#training-models)
+5. [Support Vector Machines](#support-vector-machines)
 
 # The Machine Learning Landscape
 
@@ -376,4 +385,120 @@ Softmax regression
 - Computes the softmax for each class, takes greatest probability (not writing equations)
 - When you take the argmax of the softmax, that is your prediction
 
+# Support Vector Machines
 
+An SVM is capable of doing linear or nonlinear classification, regression, and even outlier detection. They are well-suited for classification of complex, but small or medium sized datasets.
+
+## Linear SVM Classification
+
+![Graphical representation of two-class svm model](\assets\images\for-notes\svm-graph.png)
+
+- think of it as "fitting the widest possible street" between classes
+- the decision boundary is fully determined by the points on teh boundary, these are the "support vectors"
+
+### Hard Margin Classification
+
+- the bounds are set by edge support vectors
+- no points inside the bounds, NONE
+- this has some problems:
+  - only works when the data is linearly seperable
+  - very sensitive to outliers
+
+### Soft Margin Classification
+
+- keep a good balance between keeping the street as large as possible and limiting margin violations
+- hyperparameter "C" controls the ratio, higher C means a wider street but more violations allowed
+
+## Nonlinear SVM CLassification
+
+- could add more polynomial features and classify linearly
+- but low poly degree can't handle complexity, and too high degree makes the model too slow
+
+### Polynomial Kernel
+
+- to solve this, we use a kernel trick
+- can add high order polynomials without actually adding the features
+- you set a degree d, hyperparameter C as usual, and then another hyperparameter "coef0" which controls how much the model is influenced by high vs low degree polynomials
+
+### Adding Similarity Features
+
+- is a way to tackle nonlinear problems as well
+- you add features using a similarity factor - measures how much each intance resembled a landmark instance
+  - an example of this may be the Gaussian Radial Basis Function (RBF)
+- basically, computer these new features based on the distance from landmark, and it will work with linear classification
+
+### Gaussian RBF Kernel
+
+- similar to polynomial features, you can also make the similarity function into a kernel
+- adds a hyperparameter gamma that controls the bell curve of the RBF
+
+## Choosing which kernel
+
+1. Try the linear kernel, especially if the training data size is large or if there is lots of features
+2. Try GRBF if the dataset or features are not too large to be a limiting factor
+3. Then you can go to others, (like polynomial)
+
+![Table of different SVM functions and deatils about them](\assets\images\for-notes\svm-table.png)
+
+## SVM Regression
+
+Instead of tryin gto fit the largest road with least margin violations, you fit as many points as possible within the street with the smallest width
+
+# Decision Trees
+
+These guys can do classification, regression, and even multi-output classification. They are capable of fitting complex datasets, and are also a fundemental part of Random Forests
+
+### Making Predictions
+
+1. Start at the root Node
+2. Check teh boundary, move left/right
+4. Repeat 2 until on leaf
+4. Check class/value on the
+
+### Node Properties 
+
+- Samples: how many training instances it applies to in general
+- Value: how amny training instances of each class it applies to (separated by class)
+- Impurity Measure: gini impurity or entropy - measure of how many of a different class is in the ere 
+
+### The CART Training Algorithm
+
+Scikit-learn uses the Classification and Regression Tree algorithm
+
+1. Splits the training set into two subsets using a single feature k and threshold t_k
+2. Searches for the pair (k, t_k) that produces the purest subsets
+3. Once it successfully splits the training in two, it recursively splits until the max depth is reached or if a split won't increase purity of the classes
+
+Note: this is a greedy algorithm, so it doesn't always get the most optimal way of splitting. But, the solution for the most optimal is a P-NP problem, so you can't really solve it. Just know that this is pretty simple, and there are probably other algorithms,
+
+### Computational Complexity
+
+- note: m is number of instances, n is number of features
+- predictions are fast, even with large datasets - big O of log(m)
+- training compares all features on all samples at each node - big O og n*mlog(m) 
+
+### Regularization Hyperparameters
+
+- decision trees will probably overift if unconstrained (parameters are not known at the start, only through the runtime!)
+- need to restrict the freedom of parameter choices during training
+
+Parameters:
+- max depth
+- max samples split
+- min samples for a leaf
+- min weight for a fraction of a leaf
+- max leaf nodes
+- max features
+
+Also can do pruning as well
+
+### Regression
+
+This can also be used for regression, but it gives a kind of step-wise function looking thing that I think wouldn't be too useful
+
+### Instability
+
+- this type of model is particularly unstable, especially to data transformations
+- for example: the boundaries with decision trees are orthogonal, so if you rotate a dataset, you may get a jagged edge
+  - ![Jagged decision tree](\assests\images\for-note\jagged-graph.png)
+- it is also sensitive to small variations in training data
