@@ -10,6 +10,7 @@ author: Aurélien Géron
 1. [The Machine Learning Landscape](#the-machine-learning-landscape)
 2. [End to End Machine Learning Project](#end-to-end-machine-learning-project)
 3. [Classification](#classification)
+4. [Training Models](#training-models)
 
 # The Machine Learning Landscape
 
@@ -230,5 +231,153 @@ With the ones that don't, use:
 
 - Use confusion matrix to gain insights
 - Modify dataset, model, training approach,etc. based on insights
+
+
+
+
+
+# Training Models
+
+## Linear Regression
+
+Basic Idea:
+
+y_hat = t0 + t1\*x1 + t2\*x2 + ... + tn\*xn
+
+where...
+- yhat = predicted value
+- t = vector of model parameters
+- x = vector of features
+- n = number of features
+
+A vectorized version: yhat = h_t(x) = t * x = t.T @ x
+
+We want to minimize the cost between this linear model and the datapoints. For now we will use the Mean Squared Error (MSE) of the model and datapoints. This is the sum of the squared error of the predicted and actual values of the data points, divided by the number of data points (m).
+
+MSE(x, h_t) = (1/m) * sum((h_t(x) - y)^2)
+
+Now how do we go about optimizing these parameters?
+
+### The Normal Equation
+
+There is a closed form for this solution, to find the values of theta (t) that minimize the cost function. Here it is:
+
+optimal_theta = (X.T @ X)^(-1) @ X.T @ y <- can be calculated quicker with SVD
+
+### Gradient Descent
+
+This closed form can be costly, in time and memory, and sometimes is not possible to calculate!
+
+Our solution is gradient descent!
+
+- iterative approach to minimizing the cost function
+- measures the gradient of the cost function, moves in the direction of the descending gradient
+- as it moves down, it (hopefully) approaches a minimum cost value
+
+An important parameter here is the learning rate
+
+- determines how "fast" you move down the gradient
+- too fast/high, never can reach a minimum, "bouncing around"
+- too slow/low, never reaches min in time and may fall into local minima
+
+Other properties of GD include
+
+- Susceptible to local minima, if cost function has them
+- works within parameter space, so more parameters means more time and complexity because there is more space to search
+
+### Batch Gradient Descent
+
+This is an implementation of gradient descent that uses the gradient (woah) of the cost function. This means you need to compute the partial derivatives of the cost function.
+
+partial_MSE_j(t) = (2/m)\*sum(t.T @ x - y)\*x_j or partial_MSE(t) = (2/m) * X.T * (X*t - y)
+
+Main problem with this is that it's very computationally intense to compute gradients at every step. How can we help this?
+
+### Stochastic Gradient Step
+
+This, for every step, just picks a random instance in the training set and adjusts the parameters to that single instance. 
+
+Properties
+
+- much less regular than other methods
+- it is training on much less data
+- randomness can help jump out of local minima, but also means you can't really converge
+  - can fix this inability to converge with a learning schedule, slow tapering of learning rate
+
+### Mini-batch Gradient Descent
+
+This one is a healthy cross between both stochastic and batch gradient descent. It does batch gradient descent on a smaller sets of parameters each step.
+
+![Table Comparing Linear Regression Algroithms](\assets\images\for-notes\regression-table.png)
+
+## Polynomial Regression
+
+- Add powers of your features as features, then use linear regression algorithms (reflect those powers in your final predictor's equation, matching the right parameters)
+- Can find relationships between features when there are multiple features
+- Watch out! Too high of a degree can likely overfit your model
+
+Can look at learning curves to test over/under fitting. They plot the training set size and resulting cost of the trained model.
+
+- Underfitting curve: both (validation and training) cost values have reached a plateau, but they are close and pretty high 
+  - ![Underfitting Curve](\assets\images\for-notes\underfit-curve.png)
+- Overfitting curve: the training cost value is much much lower than the validation cost value, there is a big gap
+  - ![Overfitting Curve](\assets\images\for-notes\overfit-curve.png)
+
+The Bias Tradeoff - generalization error can be expressed as a sum of three errors:
+
+- Bias - due to wrong assumptions - likely underfitting
+- Variance - excessive sensitivity to small variations - likely overfitting
+- Irreducible factor - noisiness in the data itself - can be addressed at the data level as well
+
+The genral rule is that you must trade bias and variance. With the same/similar modal, if you make a change that increases bias, it'll descrease variance, and vice versa.
+
+## Regularized Linear Models
+
+Regularization is used to add more bias/lower the variance of a model. Good to have a little in general, add more when a model is overfitting
+
+### Ridge Regression
+
+Regularization term added to the cost function is the sum of the square of all the parameter values: alpha * sum(t^2)
+
+- meant to force minimization of parameter values
+- hyperparameter alpha controls how much regularization there is
+- good default regularization technique 
+
+### Lasso Regression
+
+Another regularization term, but uses the one-norm instead of squares: alpha * sum(t)
+
+- tends to completely eliminate the weights of the least important features
+- usually performs feature selection, outputs a spare model (few nonzero weights)
+- use this if features aren't needed, but probably prefer elastic net because its less durastic
+
+### Elastic Net
+
+Middle gorund between ridge and lasso, with a hyperparameter to control the ratio of each. Basically has both equations added on, but with ratio parameter to controls how much one or the other contributes.
+
+- usually use this is features aren't needed, usually preferred over lasso because it's less durastic
+
+## Logistic Regression
+
+- commonly used to tell probability that something is in a certain class
+- outputs the logistic of a result:
+
+>phat = h_t(x) = sigmoid(x.T @ t) where sigmoid(t) = 1/(1+exp(-t))
+
+- with the output of the result, you then put some threshold of probability to determine class
+
+Training and cost function
+
+>For the cost function, if y=1: cost = -log(phat) and if y=0: cost = -log(1-phat)
+
+>This can be summed up with the log loss function - not writing that :) - of which there is no known closed form, so we have to use partials (not writing those either)
+
+Decision boundary - where the no and yes meet, specific value/probability from sigmoid
+
+Softmax regression
+
+- Used for multiple classes
+- Computes the softmax for each class, takes greatest probability (not writing equations)
+- When you take the argmax of the softmax, that is your prediction
 
 
