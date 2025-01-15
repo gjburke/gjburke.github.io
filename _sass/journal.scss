@@ -1,0 +1,16 @@
+/* OVERALL NOTES PAGE */
+
+.journal-container {
+    margin-top: 20px;
+}
+
+/* Notes list */
+
+.journal-entries > li > a {
+    color: unset;
+    text-decoration: none;
+}
+
+.journal-entries > li > a:hover {
+    text-decoration: underline;
+}

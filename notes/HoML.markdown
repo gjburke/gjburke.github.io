@@ -232,10 +232,6 @@ With the ones that don't, use:
 - Use confusion matrix to gain insights
 - Modify dataset, model, training approach,etc. based on insights
 
-
-
-
-
 # Training Models
 
 ## Linear Regression
