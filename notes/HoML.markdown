@@ -5,6 +5,14 @@ note_title: Hands on Machine Learning
 author: Aurélien Géron 
 ---
 
+# Forward (on the notes)
+
+Just for some conext for someone who isn't me...
+
+These are notes that are copied from my hand-written notes that I've already taken. I'm not a big fan of computer notes, especially because I like to flex my organization and things on tge page when writing, in a way that's too cumbersome to replicate on screen. So please bear with me while I try and find a nice way to structure everything with markdown. I want these notes so I can access them anywhere. They are a more stripped version of my hand-written notes, so if these are sparse (especially of equations) just know that they are probably written elsewhere, it was probably just annoying to type it.
+
+Alright, now on with the notes!
+
 # Table of Contents
 
 1. [The Machine Learning Landscape](#the-machine-learning-landscape)
