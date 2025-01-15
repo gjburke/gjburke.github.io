@@ -11,6 +11,7 @@ author: Aurélien Géron
 2. [End to End Machine Learning Project](#end-to-end-machine-learning-project)
 3. [Classification](#classification)
 4. [Training Models](#training-models)
+5. [Support Vector Machines](#support-vector-machines)
 
 # The Machine Learning Landscape
 
@@ -376,4 +377,63 @@ Softmax regression
 - Computes the softmax for each class, takes greatest probability (not writing equations)
 - When you take the argmax of the softmax, that is your prediction
 
+# Support Vector Machines
 
+An SVM is capable of doing linear or nonlinear classification, regression, and even outlier detection. They are well-suited for classification of complex, but small or medium sized datasets.
+
+## Linear SVM Classification
+
+![Graphical representation of two-class svm model](\assets\images\for-notes\svm-graph.png)
+
+- think of it as "fitting the widest possible street" between classes
+- the decision boundary is fully determined by the points on teh boundary, these are the "support vectors"
+
+### Hard Margin Classification
+
+- the bounds are set by edge support vectors
+- no points inside the bounds, NONE
+- this has some problems:
+  - only works when the data is linearly seperable
+  - very sensitive to outliers
+
+### Soft Margin Classification
+
+- keep a good balance between keeping the street as large as possible and limiting margin violations
+- hyperparameter "C" controls the ratio, higher C means a wider street but more violations allowed
+
+## Nonlinear SVM CLassification
+
+- could add more polynomial features and classify linearly
+- but low poly degree can't handle complexity, and too high degree makes the model too slow
+
+### Polynomial Kernel
+
+- to solve this, we use a kernel trick
+- can add high order polynomials without actually adding the features
+- you set a degree d, hyperparameter C as usual, and then another hyperparameter "coef0" which controls how much the model is influenced by high vs low degree polynomials
+
+### Adding Similarity Features
+
+- is a way to tackle nonlinear problems as well
+- you add features using a similarity factor - measures how much each intance resembled a landmark instance
+  - an example of this may be the Gaussian Radial Basis Function (RBF)
+- basically, computer these new features based on the distance from landmark, and it will work with linear classification
+
+### Gaussian RBF Kernel
+
+- similar to polynomial features, you can also make the similarity function into a kernel
+- adds a hyperparameter gamma that controls the bell curve of the RBF
+
+## Choosing which kernel
+
+1. Try the linear kernel, especially if the training data size is large or if there is lots of features
+2. Try GRBF if the dataset or features are not too large to be a limiting factor
+3. Then you can go to others, (like polynomial)
+
+![Table of different SVM functions and deatils about them](\assets\images\for-notes\svm-table.png)
+
+## SVM Regression
+
+Instead of tryin gto fit the largest road with least margin violations, you fit as many points as possible within the street with the smallest width
+
+# Stuff
