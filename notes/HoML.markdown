@@ -436,4 +436,61 @@ An SVM is capable of doing linear or nonlinear classification, regression, and e
 
 Instead of tryin gto fit the largest road with least margin violations, you fit as many points as possible within the street with the smallest width
 
-# Stuff
+# Decision Trees
+
+These guys can do classification, regression, and even multi-output classification. They are capable of fitting complex datasets, and are also a fundemental part of Random Forests
+
+### Making Predictions
+
+1. Start at the root Node
+2. Check teh boundary, move left/right
+4. Repeat 2 until on leaf
+4. Check class/value on the
+
+### Node Properties 
+
+- Samples: how many training instances it applies to in general
+- Value: how amny training instances of each class it applies to (separated by class)
+- Impurity Measure: gini impurity or entropy - measure of how many of a different class is in the ere 
+
+### The CART Training Algorithm
+
+Scikit-learn uses the Classification and Regression Tree algorithm
+
+1. Splits the training set into two subsets using a single feature k and threshold t_k
+2. Searches for the pair (k, t_k) that produces the purest subsets
+3. Once it successfully splits the training in two, it recursively splits until the max depth is reached or if a split won't increase purity of the classes
+
+Note: this is a greedy algorithm, so it doesn't always get the most optimal way of splitting. But, the solution for the most optimal is a P-NP problem, so you can't really solve it. Just know that this is pretty simple, and there are probably other algorithms,
+
+### Computational Complexity
+
+- note: m is number of instances, n is number of features
+- predictions are fast, even with large datasets - big O of log(m)
+- training compares all features on all samples at each node - big O og n*mlog(m) 
+
+### Regularization Hyperparameters
+
+- decision trees will probably overift if unconstrained (parameters are not known at the start, only through the runtime!)
+- need to restrict the freedom of parameter choices during training
+
+Parameters:
+- max depth
+- max samples split
+- min samples for a leaf
+- min weight for a fraction of a leaf
+- max leaf nodes
+- max features
+
+Also can do pruning as well
+
+### Regression
+
+This can also be used for regression, but it gives a kind of step-wise function looking thing that I think wouldn't be too useful
+
+### Instability
+
+- this type of model is particularly unstable, especially to data transformations
+- for example: the boundaries with decision trees are orthogonal, so if you rotate a dataset, you may get a jagged edge
+  - ![Jagged decision tree](\assests\images\for-note\jagged-graph.png)
+- it is also sensitive to small variations in training data
