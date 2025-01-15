@@ -36,13 +36,7 @@ header > h2 {
     padding-right: 5px;
 }
 
-/* Main content */
-
-.main {
-    padding: 5px;
-}
-
-/* Top Button */
+/* Back Button */
 .control-button {
     padding: 1px 6px;
     border: 1px outset buttonborder;
@@ -58,8 +52,8 @@ header > h2 {
     transform: translate(-50%);
 }
 
-/* Markdown Styling */
+/* Main content */
 
-img {
-    height: 200px;
+.main {
+    padding: 5px;
 }
