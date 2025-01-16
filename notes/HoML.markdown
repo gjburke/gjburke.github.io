@@ -20,6 +20,8 @@ Alright, now on with the notes!
 3. [Classification](#classification)
 4. [Training Models](#training-models)
 5. [Support Vector Machines](#support-vector-machines)
+6. [Decision Trees](#decision-trees)
+7. [Dimensionality Reduction](#dimensionality-reduction)
 
 # The Machine Learning Landscape
 
@@ -502,3 +504,129 @@ This can also be used for regression, but it gives a kind of step-wise function 
 - for example: the boundaries with decision trees are orthogonal, so if you rotate a dataset, you may get a jagged edge
   - ![Jagged decision tree](\assests\images\for-note\jagged-graph.png)
 - it is also sensitive to small variations in training data
+
+# Ensemble Learning and Random Forests
+
+Technique where you take a group of predictors (an ensamble) and make predictions by combining theirs. An example of this is a Random Forest, which is an ensembel of decision trees (we'll get to it more later).
+
+### Voting Classifiers
+
+You make an ensemble by training a few different types of classifiers on a single problem, training set
+
+- hard-voting: prediction is the class that gets the most votes (majority of classifier's output)
+- soft-voting: predict the class with the highest aggregate probability (needs models that output probability)
+
+### Bagging and Pasting
+
+You make an ensamble through using the algorithm, but only training each on subsets of the training data
+
+- bagging: get samples with replacement
+- pasting: get the samples without replacement
+
+Then the aggregation function for all the models is usually a statistical mode (most common answer) for classification, and a mean for regression. The net result is a similar bias, and less overall variance
+
+### Random Patches and Trandom Subspaces
+
+- Random Patches: random sampling of instances and features
+- Random Subspaces: random sampling of features
+
+Trades a bit more bias for lower variance
+
+### Random Forests
+
+These are an ensemble of decision trees, usually using bagging (with the max samples set to the size of the training set). Basically, creates and trains a large amount of decision trees (with a little more randomness in their generation) and takes the most common result for classificaiton.
+
+- generally have all the hyperparameters of a decision tree and bagging algorithms
+- also introduces more randomness by only sampling from a subset of features for each node split for each tree
+
+Extra Trees
+
+- make trainign even more random by setting random thresholds for each node on a tree
+- trades more bias for lower variance
+
+Random forests make it easy to measure the relative importance of each feature by looking at which impact impurity the most. They are also just really powerful classifier models.
+
+### Boosting
+
+The idea is to train predictors sequentially, each trying to correct the one before.
+
+AdaBoost
+
+- pays more attension to the training instances that were misclassified (adjusts the relative weights of data points missed)
+- in teh end, it aggregates of all the models' output (with weighting depending on each model's accuracy)
+
+Gradient Boosting
+
+- next model tries to fit the residual errors of the previous
+- make predictions by adding the predictions of all models/predictors
+- can also subsample the training instances, making it stochastic
+
+### Stacking
+
+This is where you train a model to evaluate the predictions of an ensemble of models
+
+1. Split the set
+2. Train the ensemble of models on one hal
+3. Once those are trained, feed the other half of the data through those models
+4. Train the aggregator model on these outputs
+
+You can also stack the stacked with even more to stack!
+
+# Dimensionality Reduction
+
+### The Curse of Dimensionality
+
+- more dimensions (a ton of them) leads to slow training, harder to find a good solution
+- more/higher dimensions -> more sparse dataset, training instances are further from each other
+  - leads to higher risk of overfitting
+- need exponentially more data for more features to mitigate this risk
+
+## Dimensionality Reduction
+
+- you usually are able to reduce the number of features significantly (whether it be manually, with algorithms, etc)
+- models can perform better with less, but well selected, relevant features
+- its also useful for data visualization (DataViz), which is especially important when presenting to non-techinical stakeholders
+
+### Main Approaches:
+
+- Projection - project data on a lower-dimensional plane
+  - not the best approach when the data plane is not linear
+- Manifold Learning - models a manifold (like a folded or twisted plane) that the data lies on
+  - assumes the data lies on such a manifold and that projecting it onto the manifold would simplify the problem somehow
+
+### PCA
+
+1. identifies the hyperplane that lies closest to the data, then projects the data onto it
+2. selects the axis that preserves the greatest variance, then second axis is orthogonal that that with preserving the second greatest, etc.
+  - the explained variance ratio shows how much variance each component is responsible for
+  - these axes can be found with the SVD (like from numerical methods!)
+3. we can then project the instances down to d-Dimensions with the principal component vectors
+  - projecting it back with the reverse operation will have a recontruction error, but if done well will not lose much information
+4. to determine how many dimensions we want, we can use teh explained variance ratio and add dimensions until at a certain threshold of cumulative explained variance
+
+Incremental PCA
+
+- since the usual PCA needs all the data in memory, that may be a limiting factor
+- incrememntal PCA splits the trainign set into multiple mini-batches and feeds it one batch at a time
+
+Kernel PCA
+
+- used to do complex, nonlinear projections
+- good a preserving clusters after projection, or sometimes unrolling datasets in a twisted manifold
+- unsupervised, so you gotta search for the right kernel (grid, or based on reconstruction error - with extra steps)
+
+## Local Linear Embedding (LLE)
+
+- nonlinear dimensionality reduction
+- manifold technique, not reliant on projections
+
+1. measures how each instance relates to its closest neighbors
+2. looks for a low-dimensional representation where these relationships are preserved
+
+## Others
+
+- Multidimensional Scaling
+- Isomap
+- t-Distributed Stochastic Neighbor Embedding
+- Linear Descriminant Algorithms
+
