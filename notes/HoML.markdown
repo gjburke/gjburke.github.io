@@ -20,6 +20,7 @@ Alright, now on with the notes!
 3. [Classification](#classification)
 4. [Training Models](#training-models)
 5. [Support Vector Machines](#support-vector-machines)
+6. [Decision Trees](#decision-trees)
 
 # The Machine Learning Landscape
 
