@@ -503,3 +503,71 @@ This can also be used for regression, but it gives a kind of step-wise function 
 - for example: the boundaries with decision trees are orthogonal, so if you rotate a dataset, you may get a jagged edge
   - ![Jagged decision tree](\assests\images\for-note\jagged-graph.png)
 - it is also sensitive to small variations in training data
+
+# Ensemble Learning and Random Forests
+
+Technique where you take a group of predictors (an ensamble) and make predictions by combining theirs. An example of this is a Random Forest, which is an ensembel of decision trees (we'll get to it more later).
+
+### Voting Classifiers
+
+You make an ensemble by training a few different types of classifiers on a single problem, training set
+
+- hard-voting: prediction is the class that gets the most votes (majority of classifier's output)
+- soft-voting: predict the class with the highest aggregate probability (needs models that output probability)
+
+### Bagging and Pasting
+
+You make an ensamble through using the algorithm, but only training each on subsets of the training data
+
+- bagging: get samples with replacement
+- pasting: get the samples without replacement
+
+Then the aggregation function for all the models is usually a statistical mode (most common answer) for classification, and a mean for regression. The net result is a similar bias, and less overall variance
+
+### Random Patches and Trandom Subspaces
+
+- Random Patches: random sampling of instances and features
+- Random Subspaces: random sampling of features
+
+Trades a bit more bias for lower variance
+
+### Random Forests
+
+These are an ensemble of decision trees, usually using bagging (with the max samples set to the size of the training set). Basically, creates and trains a large amount of decision trees (with a little more randomness in their generation) and takes the most common result for classificaiton.
+
+- generally have all the hyperparameters of a decision tree and bagging algorithms
+- also introduces more randomness by only sampling from a subset of features for each node split for each tree
+
+Extra Trees
+
+- make trainign even more random by setting random thresholds for each node on a tree
+- trades more bias for lower variance
+
+Random forests make it easy to measure the relative importance of each feature by looking at which impact impurity the most
+
+### Boosting
+
+The idea is to train predictors sequentially, each trying to correct the one before.
+
+AdaBoost
+
+- pays more attension to the training instances that were misclassified (adjusts the relative weights of data points missed)
+- in teh end, it aggregates of all the models' output (with weighting depending on each model's accuracy)
+
+Gradient Boosting
+
+- next model tries to fit the residual errors of the previous
+- make predictions by adding the predictions of all models/predictors
+- can also subsample the training instances, making it stochastic
+
+### Stacking
+
+This is where you train a model to evaluate the predictions of an ensemble of models
+
+1. Split the set
+2. Train the ensemble of models on one hal
+3. Once those are trained, feed the other half of the data through those models
+4. Train the aggregator model on these outputs
+
+YOu can also stack the stacked with even more to stack!
+
