@@ -22,6 +22,7 @@ Alright, now on with the notes!
 5. [Support Vector Machines](#support-vector-machines)
 6. [Decision Trees](#decision-trees)
 7. [Dimensionality Reduction](#dimensionality-reduction)
+8. [Unsupervised Learning Techniques](#unsupervised-learning-techniques)
 
 # The Machine Learning Landscape
 
@@ -502,7 +503,7 @@ This can also be used for regression, but it gives a kind of step-wise function 
 
 - this type of model is particularly unstable, especially to data transformations
 - for example: the boundaries with decision trees are orthogonal, so if you rotate a dataset, you may get a jagged edge
-  - ![Jagged decision tree](\assests\images\for-note\jagged-graph.png)
+  - ![Jagged decision tree](\assets\images\for-notes\jagged-graph.png)
 - it is also sensitive to small variations in training data
 
 # Ensemble Learning and Random Forests
@@ -629,4 +630,123 @@ Kernel PCA
 - Isomap
 - t-Distributed Stochastic Neighbor Embedding
 - Linear Descriminant Algorithms
+
+# Unsupervised Learning Techniques
+
+The vast majoirty of data is unlabelled, good labelled data is hard to come by or generate. We can take advantage of this unlabelled data with unsupervised (and semisupervised) techniques. 
+
+Main algortihms include:
+
+- Clustering: group similar instances
+- Anomaly detection: detect "abnormal" instances
+- Denstiy estimation: estimating the probability density function
+
+## Clustering
+
+- identifying similar instances, grouping them together
+- has a variety of applications: segmentation, data analysis, dimension reduction, anomaly detection, semi-supervised learning, search engines/similarity search
+- what a "cluster" is depends on the context, different algorithms give different clusters
+
+### K-means (loyd-Forgy)
+
+- simple algorithm, cluster simply and efficiently
+- but you need to specify the number of clusters beforehand (not always obvious!)
+- uses hard clustering: only one cluster per instance
+- doesn't do well with different diameter blobs
+
+The algorithm
+
+1. Assign centroids (centers of the cluster) randomly
+2. Label instances, update centroids, repeat
+- label instances to the closest centroid
+- update the centroid to the new "center" of all the labelled instances
+
+Optimizations
+
+- when evaluating which model is best, can use the inertia to see which is best
+  - intertia is the sum of the mean squared distances of each instance to its centroid
+- better centroid initialization: make sure that they're spread out from one another
+  - can also run multiple times with different random initializations
+- the algorithm was made better by doing some smart storage of certain distances, means less recalculation was required, leads to quicker algorithm
+- mini-batch k-means that trains on small batches of data, leads to better memory management
+
+Selecting a good centroid amount
+
+- sometimes its not obvious
+- can't just use inertia
+  - if you do, you want to use a value around the "elbow" of the graph of centroid amount vs resulting inertia
+- can use the silouhette coefficient/score, which ranges from 1 (point close to center) to 0 (on the border of the cluster) to -1 (on the wrong side, in another cluster)
+
+Limits
+
+- not good with ellipses, varying sizes, non-spherical clusters
+
+Use cases
+
+- image segmentation
+- preprocessing, dimension reduction
+- semi-supervised learning
+
+### DBScan
+
+- defines clusters as regions of high instance density
+- works well if clusters are dnese enough, and well-seperated by low-density regions
+
+The algortihm:
+
+1. For each instance, count the number of instances within some small distance (epsilon) from it
+- the instances within epsilon from another instance are within that instance's neighborhood
+2. If an instance has at least min_sample instances in its neighborhood, then its a core instance
+
+- all instances in the neighborhood of a core instance are in teh same cluster, and a chain of cores creates one big cluster
+- any instance that is not in a core's neighborhood is an outlier
+
+Important note:
+
+- this algorithm cannot predict which cluster something will belong to
+- instead, now that you have the classes/clusters, you can train a classification algorithm with the labels formed by the clusters
+
+Overall this is very powerful
+
+- capable of identifying a number of clusters, even with funky shapes
+- robust to outliers
+- just two hyperparameters (epsilon and min_samples)
+- but... if the density varies across the structures or is just too low in general, then this doesn't work as well
+
+## Guassian Mixtures
+
+This is a probabalistic and generative model that assumes the data is a mixture of several gaussian distributions. It works on ellipsoid-like shapes of data, but not much else
+
+How it works (I think) <- this explanation isn't great ngl
+
+- you choose the number of "clusters"/distributions, the algortihm choosing starting centers, means, covariance, and mixing coefficients for each
+- the model fits the means, covariences, and mixing coefficients to the dataset
+  - it first evaluates the probability that the instance belongs to each distribution
+  - then it updates the parameters to maximize the likelihood that the instances are "under" the model
+- within that, it has methods with the eval and update functions to keep the distributions to just fit the data, not go overboard
+
+But you can think if this as a k-means that find the cluster's centers, as well as the size, shape, orientation, and relative weights. Because its made from distributions, it uses soft-cluster assignments, where you can measure the likelihood it belonds to any cluster.
+
+Properties
+
+- struggles on many dimensions, clusters, or few instances
+- can have different coveriance/distribution types
+
+Selecting Number of Distributions
+
+- similar to k-means
+- use theoretical information criterion
+  - BIC or AIC
+- select at elbow or minimum
+
+Uses
+
+- anomaly detection: high vs low density (where low desnity are outliers)
+  - need effective density threshold
+- novelty detection: anomaly detection but wihtout any outliers in the training set
+
+### Bayseian-Gaussian Mixture
+
+Basically a similar model, nit ow searches for the optimal number of clusters as well. The cluster parameters are no longer fixed, so some can go to essentially zero
+
 
