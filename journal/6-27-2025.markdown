@@ -1,0 +1,31 @@
+---
+layout: entry
+title: Maybe It's a Week Instead
+date: 5/30/2025
+---
+
+It's a Friday night, I'm feeling a little inspired...
+
+The weekend will probably be my best bet for all of this.
+Like I was saying in the project update for the Note Transfer app,
+all of the things I'm doing right now total up to pretty much
+a full time job. So I'm still kind of scrounging for time to do
+all the other responsiblities I have, while also balancing fun stuff.
+
+But I'm not trying to complain about the amazing opportunities
+that I have and am a part of, I'd rather talk about the future and how I'm going to work on cool things. Okay so the note transfer project is
+pretty cool, and definitely good for me to use (which is a good motivator to actually make this project go crazy). And future projects, things I'd like to do: there's so much.
+
+## Interesting Things?
+
+I'm just going to talk about some ideas, things I've seen, inspirations that I've come across.
+
+**Self-Hosted AI** - Yeah so I don't totally like the idea of all these AI companies just harvesting my interactions with AI. Any input is probably theirs, and who knows what they do with it. I mean, none of the large tech companies (all that are vying for AI supremacy) are good with data - we know this. So having my own rig with self-hosted models would be really cool. I think I can get started small: repurposing my old PC and/or laptop into some server with ProxMox (or whatever that is). Would be interested to see if I could set that up, a little API endpoint on my own server for my self-hosted model. That might be a next-summer things though when I have a little more money (if I do). Interesting thoughts tho. Would be really cool to have a home lab of a bunch of different models and be able to make my own personal agents and applications to do work.
+
+**Self-Evolving Systems** - When I was doing some research on Nokia Bell Labs (pretty interesting stuff) they were talking a lot about their future, which seemed intriguing. Not sure if I fully believe in their vision, but it would be interesting to see! Anyway, one thing that they talked about was having some sort of automated networking system. It seemed like they wanted AI to do all the upkeep, troubleshooting, improvements, etc. Something you might have to do some maintenance on, but ideally it would grow, improve, and evolve on its own. That made me think I should try something like that myself. Maybe not a self-editting codebase, but inserting AI into some sort of system and see what happens. My idea is sort of like those 'teaching AI to run' or 'AI learns game theory' type videos. Play around with 'Agentic' AI, figure out how to give LLMs different tools and access to things, experiment with different learnign and interaction systems, different tasks, games, etc. I think acutally playing with this technology will be interesting, allow me to explore it in a way thats fun and engaging, instead of learning about it through some course or YouTube tutorials (though those will probably come along too). Either way, very interesting tech and it'll be cool to see how it goes.
+
+Alright, I think that's it for now from me today, maybe I'll be seeing this site every Sunday, I think thats the plan, but you know how those go with low-priority things. We'll see.
+
+Best of Luck!
+
+-Griffin

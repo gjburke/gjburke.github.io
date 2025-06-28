@@ -1,6 +1,8 @@
 - title: Hands on Machine Learning
   author: Aurélien Géron 
+  type: book
   link: /notes/HoML.html
 - title: The Pragmatic Programmer
   author: David Thomas and Andrew Hunt
+  type: book
   link: /notes/TPP.html

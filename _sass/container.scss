@@ -1,3 +1,8 @@
+/* Everything overall */
+html {
+    scrollbar-gutter: stable;
+}
+
 /* Overall Body */
 
 body {
@@ -17,8 +22,20 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: flex-end;
     height: 75px;
     border-bottom: 1px solid black;
+    padding: 0px 5px 0px 5px;
 }
 
+.header-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.header-content > * {
+    margin: 0;
+}

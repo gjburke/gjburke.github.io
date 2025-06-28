@@ -1,20 +1,16 @@
 /* Header Title */
 
 .header-content > h1 {
-    font-size: 28px;
+    font-size: 36px;
 }
 
-.header-content > h2 {
+.header-content > a {
     font-size: 18px;
+    font-style: italic;
+    text-decoration: none;
 }
 
-/* Main content */
-
-.main {
-    padding: 5px;
-}
-
-/* Top Button */
+/* Back Button */
 .control-button {
     padding: 1px 6px;
     border: 2px outset buttonborder;
@@ -28,13 +24,11 @@
     left: 50%;
     bottom: 10px;
     transform: translate(-50%);
-    //background: lightgrey;
-    //padding: 5px 2px 5px 2px; 
-    //border-radius: 5px;
 }
 
-/* Markdown Styling */
 
-img {
-    height: 200px;
+/* Main content */
+
+.main {
+    padding: 5px;
 }

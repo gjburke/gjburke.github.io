@@ -1,0 +1,20 @@
+---
+layout: entry
+title: The Day is (Hopefully) Soon
+date: 5/30/2025
+---
+
+By this weekend I should be able to update this site, get it to where I want it,
+have everything that I want on it as well. The summer is starting up, and I want to 
+improve on my journaling habits so this site will be a great way for me to do that.
+
+I think I'll have to eventually make scripts for ease of use for this site in order 
+to make sure I keep using it. I want to make logging everything as frictionless as can be
+so that its easy for me to do and not not do. But that stuff will come after I actually 
+get all of this stuff updated and situated.
+
+Even after I get the layout done, I should still add some projects to the projects page,
+things to my "About Me", and any other updates to the information on the site. Shouldn't be
+too bad though. 
+
+Excited to get started with this site! Hoping that I can use it well to help me learn, reflect, and grow!

@@ -1,37 +1,26 @@
 /* Header Title */
 
-header > a {
+.header-content > a {
     all: unset;
-}
-
-header > a:hover {
-    cursor: pointer;
-}
-
-header > a > h1 {
     font-size: 48px;
-    margin: 0px;
-    padding-top: 24px;
-    padding-left: 5px;
+    font-weight: bold;
+}
+
+.header-content > a:hover {
+    cursor: pointer;
 }
 
 /* Header Navigation */
 
-header > nav {
-    padding-right: 5px;
-    padding-top: 40px;
+.current {
+    text-decoration: underline !important;
 }
 
-header > nav > a {
-    font-size: 30px;
+.header-content > nav > a {
+    font-size: 28px;
     color: black;
     text-decoration: none;
-    margin: 0px 5px 0px 5px;
-}
-
-.current {
-    color: blue;
-    text-decoration: underline;
+    padding-left: 5px;
 }
 
 /* For the main content */

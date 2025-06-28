@@ -6,6 +6,10 @@
 
 /* Notes list */
 
+.journal-entries > li {
+    list-style-type: none;
+}
+
 .journal-entries > li > a {
     color: unset;
     text-decoration: none;

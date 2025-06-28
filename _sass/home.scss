@@ -44,3 +44,21 @@
     color: unset;
     text-decoration: none;
 }
+
+/* List of different topics */
+#topics-list {
+    list-style-type: none;
+}
+
+#topics-list > li {
+    margin-bottom: 10px;
+}
+
+#topics-list > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+#topics-list > li > a:hover {
+    text-decoration: underline;
+}

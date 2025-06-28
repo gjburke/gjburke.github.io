@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.project_title }}</title>
-    <link rel="stylesheet" href="/assets/css/note-styles.css"/>
+    <link rel="stylesheet" href="/assets/css/project-styles.css"/>
   </head>
   <body>
     <div class="content">
       <header>
         <div class="header-content">
-          <h1>{{ page.note_title }}</h1>
-          <h2>By: {{ page.author }}</h2>
+          <h1>{{ page.project_title }}</h1>
+          <a href="https://{{ page.github }}" target="_blank">{{ page.github }}</a>
         </div>
       </header>
       <a id="note-top"></a>
@@ -18,8 +18,7 @@
         {{ content }}
       </div>
       <div class="bottom-button-wrapper">
-        <a class="control-button" href="/notes.html">Back to notes</a>
-        <a class="control-button" href="#top">Back to top</a>
+        <a class="control-button" href="/projects.html">Back to projects</a>
       </div>
     </div>
   </body>

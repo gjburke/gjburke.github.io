@@ -3,46 +3,101 @@ layout: default
 title: About
 email: gjburke2@illinois.edu
 ---
-<div>
-    <p>
-        This is my site. Hopefully going to host some notes and project pages and stuff I've done.
-    </p>
-    <p>
-        I'm building this site for me, but if you happen to not be me and are on this site, 
-        hello! Welcome!
-    </p>
-    <h2>Quick Intro</h2>
-    <p>
-        Hi! My name is Griffin Burke, I am currently a sophomore at the 
-        University of Illinois studying Computer Science with a Minor in Mathematics
-        (and possibly Data Science too, we'll see) and an interest in quantum computing.
-    </p>
-    <p>
-        I'm interested in a lot of things and am still exploring many aspects of computer science.
-        However, I've found myself drawn to the ML/AI/Data Science aspects of computer science
-        recently. General topics of interest in that area would be:
-    </p>
-    <ul>
-        <li><b>ML/AI Engineering</b>: Building, training, tuning, and maintaining models </li>
-        <li><b>Data Science/Engineering</b>: Working with, modeling large and complex datasets</li>
-        <li><b>MLOps</b>: Designing, implementing, maintaining ML/AI/Data pipelines</li>
-        <li><b>Software Engineering</b>: with a focus on implementing AI/ML models into software</li>
-    </ul>
-    <p>
-        Right now I'm learning and gaining experience with more rigor in Machine Learning Engineering
-        (assuring proper documentation, using pipelines for proper data handling, generally more 
-        methodical work). I'd like to gain more expereince in those things, as well as what goes into 
-        deploying an ML/AI model (MLOps and backend pipelines, but also within the front end of the software).
-    </p>
-    <p>So yeah, that's a little about me. If you want to want to get to know me more, my email is {{ page.email }}.</p>
-
-    <h2>Credit</h2>
-    <p>This site is currently built using Jekyll (but is not a great representation of its power)</p>
-    <p>
-        You can find the source code for Jekyll at GitHub:
-    </p>
-    
-    <a href="https://github.com/jekyll/jekyll">jekyll</a>
-    <br/>
-    <a href="https://github.com/jekyll">jekyll organization</a>
+<div class="about-container">
+    <section>
+        <p>Contact me at: <a href="mailto:gjburke2@illinois.edu">gjburke2@illinois.edu</a></p>
+        <h2>Quick Intro</h2>
+        <p>
+            Hi! My name is Griffin Burke, I'm coming into my Junior year at the 
+            University of Illinois studying Computer Science with a Minor in Mathematics
+            (and probably Statistics soon as well).
+        </p>
+        <p>
+            I know I'm interested in AI/ML, that sort of sphere, but I'm still exploring the different
+            areas within it that I might want to work with. I'm a big fan of building, creating AI-integrated
+            apps to solve problems that I have. But that never seems to scratch the itch that research does,
+            where I'm really getting into the technical aspects of how these models that I'm using actually work,
+            and how we can improve their architecture and deployment. 
+        </p>
+        <p>
+            Within the next year I'm aiming to be a part of that research space and really dig deep,
+            seeing if the type of work is for me, while learning a lot of AI/ML theory.
+            I'd also like to learn how to work with large-scale AI applications. Most of what I've built
+            is local, or simple API calls. I'd like to expand to cloud-based development and deployment
+            of models and apps.
+        </p>
+    </section>
+    <section>
+        <h2>My Work</h2>
+        <p>I'm doing some cool things right now with different groups, including:</p>
+        <ul>
+            <li>
+                Developing a poacher detection system through extracting context from the bioacoustic soundscape of the rainforest
+                (Kashmir World Foundation)
+            </li>
+            <li>
+                Utilizing vision models to predict cow weight based off of overhead imaging (Illinois Digital Animal Systems Lab)
+            </li>
+            <li>
+                Creating a note transfer application that is about to digitize notes into formatted markdown (Personal Project)
+            </li>
+        </ul>
+        <p>
+            I'm always looking for interesting applications of AI that I can be a part of, so don't hesitate to reach out
+            if you've got something you think I'll like! Even if I'm too busy at the moment to actually join, I'm always down 
+            to meet people who are doing interesting things.
+        </p>
+    </section>
+    <section>
+        <h2>Future Plans</h2>
+        <p>For this site:</p>
+        <ul>
+            <li>Refactor to be more mobile-friendly</li>
+            <li>Use the note-transfer project to digitize my notes from my notebooks onto this site</li>
+            <li>Once notes are digitized, can start trying out cool semantic modeling ideas</li>
+        </ul>
+        <p>School-wise: </p>
+        <ul>
+            <li>Should be taking Artificial Intelligence (CS440) and Machine Learning (CS446) in Spring 2025 - finally!</li>
+            <li>Around the same time (hopefully before), become a part of an AI research lab at UIUC, start doing interesting research</li>
+        </ul>
+        <p>Professionally: </p>
+        <ul>
+            <li>I'll be working on this note-transfer app, should be done by the end of summer</li>
+            <li>Learn more about distributed ML systems, how models are integrated and deployed into large-scale apps</li>
+        </ul>
+    </section>
+    <!--
+    <section>
+        <h2>Alright alright... onto actual content</h2>
+        <div id="current-work">
+            <div class="work-column">
+                <p><a href="/notes.html">Notes </a>I'm taking right now:</p>
+                <ul>
+                    {% for note in site.data.current_notes %} 
+                        <li><a href="{{ note.link }}">{{ note.title }} by {{ note.author }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="work-column">
+                <p><a href="/projects.html">Projects </a> I'm working on:</p>
+                <ul>
+                    <li><a>Some smaller "projects" corresponding with the book</a></li>
+                </ul>
+                <p>Nothing else :( </br> (Not much time with classes, research, and other extracurriculars)</p>
+            </div>
+        </div>
+    </section>
+    -->
+    <section>
+        <h2>Credit</h2>
+        <p>This site is currently built using Jekyll (but is not a great representation of its power)</p>
+        <p>
+            You can find the source code for Jekyll at GitHub:
+        </p>
+        
+        <a href="https://github.com/jekyll/jekyll">jekyll</a>
+        <br/>
+        <a href="https://github.com/jekyll">jekyll organization</a>
+    </section>
 </div>

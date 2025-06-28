@@ -5,75 +5,42 @@ layout: default
 <div class="home-container">
     <section>
         <p> 
-            This website was last updated on: <strong>4/6/2025</strong> (was just some minor updates to main and about pages)
+            This website was last updated on: <strong>6/27/2025</strong>
         </p>
         <p> 
             I tend to get focused on work and school, all that type of stuff. So this website may be left for a while time to time.
-            If you are interested in my work and this isn't being actively updated, please reach out at my email (in about section)!
+            If you are interested in my work and this isn't being actively updated, please reach out at my email (in the about page)!
         </p>
     </section>
+    <aside style="float: right; margin: 20px; margin-top:0px">
+        <img src="assets\images\me.jpg" alt="A picture of me" style="width:175px"/>
+    </aside>
     <section>
-        <h2>Welcome</h2>
+        <h2>Hi! Welcome!</h2>
         <p>
-            Hi, my name is Griffin Burke, I am a sophomore at the University of Illinois in Urbana Champaign studying
-            Computer Science, with a minor in Mathematics (and possibly Data Science too).
-        </p>
-        <p>
-            I'm very interested in AL/ML/All those buzzwords, and am looking to gain more experience in each aspect of
-            that overall field. That would be pipelines to handle data, creating the models, to implementing them in software,
-            to name a few.
+            My name is Griffin Burke, I am an undergrad student at the University of Illinois in Urbana Champaign studying
+            Computer Science, with a minor in Mathematics (and probably Statistics soon as well).
         </p>
     </section>
-    <section>
-        <h2>My Work</h2>
-        <p>I'm doing some cool things right now with different groups, including:</p>
-        <ul>
-            <li>
-                Developing a poacher detection system through the subtle differences and context of bird calls,
-                planning on using LLM technology (Kashmir World Foundation)
-            </li>
-            <li>
-                Creating vision models to predict cow weight based off of overhead imaging (Illinois Digital Animal Systems Lab)
-            </li>
-            <li>
-                Leading Company Match, a site that finds the best companies for students based on preferred workplace culture, environment (Project Code)
-            </li>
+        <h2>My Stuff</h2>
+        <p>
+            This site is meant to be a hub of what I think about, learn, and create. 
+            Right now, it's mainly focused on computer science, but who knows where life will take me :)
+        </p>
+        <p>Here is what's on this site:</p>
+        <ul id="topics-list">
+            {% for page in site.data.navigation %}
+                <li><a href="{{ page.link }}"><strong>{{ page.name }}</strong></a> - {{ page.description }}</li>
+            {% endfor %}
         </ul>
-        <p>
-            I'm always looking for interesting applications of AI that I can be a part of, so don't hesitate to reach out
-            if you've got something you think I'll like! Even if I'm too busy at the moment to actually join, I'm always down 
-            to meet people who are doing interesting things.
-        </p>
         <p id="resume-container">
-            <span>Oh and if you're a recruiter, here are my resume(s):</span>
+            <span>Oh and if you're a recruiter, here's my resume(s):</span>
             <span id="resumes"> 
-                <a href="assets\images\Griffin_Burke_Curr_Resume.pdf" target="_blank">Main for now</a>
+                <a href="assets\images\Griffin_Burke_Resume_5_28_2025.pdf" target="_blank">Main</a>
                 <!--<a href="assets\images\Griffin_Burke_SWE_Resume.pdf" target="_blank">Software</a> 
                 <a href="assets\images\Griffin_Burke_ML_Resume.pdf" target="_blank">ML/AI</a> 
                 <a href="assets\images\Griffin_Burke_Data_Resume.pdf" target="_blank">Data</a>-->
             </span>
         </p>
     </section>
-    <!--
-    <section>
-        <h2>Alright alright... onto actual content</h2>
-        <div id="current-work">
-            <div class="work-column">
-                <p><a href="/notes.html">Notes </a>I'm taking right now:</p>
-                <ul>
-                    {% for note in site.data.current_notes %} 
-                        <li><a href="{{ note.link }}">{{ note.title }} by {{ note.author }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="work-column">
-                <p><a href="/projects.html">Projects </a> I'm working on:</p>
-                <ul>
-                    <li><a>Some smaller "projects" corresponding with the book</a></li>
-                </ul>
-                <p>Nothing else :( </br> (Not much time with classes, research, and other extracurriculars)</p>
-            </div>
-        </div>
-    </section>
-    -->
 </div>
