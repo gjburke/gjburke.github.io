@@ -1,0 +1,17 @@
+---
+layout: entry
+title: We're Getting There...
+date: 7/13/2025
+---
+
+Just got back into my personal project - things are looking pretty promising! The model is pretty decent base-wise, and I think I'll be able to work with it. Segmentation might be interesting, but I feel like training it might be pretty easy. We'll see though. I write most of the deatils about that on the GitHub projects page, so [look over there](https://github.com/gjburke/note-transfer) for that project.
+
+I also started setting up my experiments with the LLMs. I had a cool talk about multimodel LLMs through KWF recently, and the speaker talked about using pydantic and another library to build classes/stuctures that the model can output in. I found that really helpful, as outputting structured text is something that I was trying to figure out since it'll be pretty important for designing the experiments.
+
+It's interesting how dealing with AI models is more of a technical writing task than coding. You have to learn how to precisely describe what you want to do, which can be really hard for some tasks. YOu make a lot of assumptions about your vision that you don't realize. It might even help me with leading teams, making sure that I can flesh out my ideas fully (I guess just technical writing in general). 
+
+There's so many cool things to do ahead, I just hope I can keep at least the weekend-play schedule. If I can do things after working, I would also dabble every once in a while. Just have to realize that anything worth working on is worth doing a little.
+
+You've got it!
+
+-Griffin
