@@ -1,8 +1,8 @@
 ---
 layout: note
-title: HoML
-note_title: Hands on Machine Learning
+title: Hands on Machine Learning
 author: Aurélien Géron 
+type: book
 ---
 
 # Forward (on the notes)

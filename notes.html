@@ -21,9 +21,9 @@ title: Notes
     <section>
         <h2>Books</h2>
         <ul class="notes-list">
-            {% for note in site.data.notes %} 
+            {% for note in site.notes %} 
                 {% if note.type == "book" %}
-                    <li><a href="{{ note.link }}">{{ note.title }} by {{ note.author }}</a></li>
+                    <li><a href="{{ note.url }}">{{ note.title }} by {{ note.author }}</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
