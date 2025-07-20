@@ -1,0 +1,44 @@
+---
+layout: entry
+title: Getting Back Into It...
+date_created: 7/20/2025
+---
+
+Like I said on my journal in the note-transer GitHub, I really forgot how much I liked building things.
+I mean, at least when its going well ;)
+
+But really, I just felt like there were so many different tools at my fingertips, and I'm able right now
+to string them together and figure out how thye can work with each other to produce what I want.
+And Python definitely helps making it pretty intuitive, and with notebooks, the ease of experimenting
+and figuring out what works, then being able to implement that is really wild.
+
+Of course, I still have a lot to learn when actually deploying these apps. Right now, my 'finished product'
+that I'm aiming for is realistically just a mock-up, a proof of concept. But I don't really know how to deploy something
+fully right now, especially not in the cloud or for a ton of users.
+
+I was thinking about that while I was programming. I was like, "there are a lot of pages to process",
+"for each page there is a segmentation into each line", "then I preprocess each line", "then I use the TrOCR model".
+That's **a ton** of calls and computations for just one page, let alone a lot of pages.
+I know that Adobe's text recognition can feel kind of slow with large PDFs, so I can only images what my non-optimized
+pipeline will be like in the end.
+
+But I don't expect myself to know that know, just want to get better and learn how to program that stuff by the end of the day.
+There's so many ways of approaching the problem, things that could be improved...
+
+- Queueing up the jobs of processing each line, having multiple threads of processing
+- Combining some lines for possibility of sustained context and faster processing
+- Being able to handle the processing of different users at the same time (this comes with the previosu two and more)
+
+I can't even really start to know the extent to which I'm only scratching the surface of all of that.
+But for now, I'll stick with my limited scope until I've finished this prototype, then I can worry about
+learning optimizations, deployment, etc.
+
+I have a ways to go until I'm really thinking about SWE issues at scale, but I can't wait until I'm proficient enough
+to fully know what's going on. I'll be working on it whenever I can, building from the ground up.
+
+I'm excited for the future, to be building novel systems for interesting problems ('novel', yuck. word sounds kind of pretentious)
+and having a good time learning while doing it.
+
+Best of luck on the future endevours. Stay hacking, staying interested!
+
+-Griffin
