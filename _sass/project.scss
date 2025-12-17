@@ -1,13 +1,19 @@
 /* Header Title */
 
+.header-content {
+    padding: 5px;
+}
+
 .header-content > h1 {
     font-size: 36px;
+    margin-right: 10px;
 }
 
 .header-content > a {
     font-size: 18px;
     font-style: italic;
     text-decoration: none;
+    margin-left: 10px;
 }
 
 /* Back Button */

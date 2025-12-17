@@ -8,13 +8,18 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
 }
 
 .content {
     align-self: center;
-    width: 750px;
+    width: 600px;
+    margin-top: 40px;
 }
 
 /* Header */
@@ -38,4 +43,23 @@ header {
 
 .header-content > * {
     margin: 0;
+}
+
+/* Side Nav */
+.nav-list-container {
+    position: sticky;
+    top: 75px;
+    height: 0px;
+    margin-left: -150px;
+    font-size: 1.25em;
+}
+.nav-list {
+    padding-left: 0px;
+}
+.nav-list-text {
+    color: black;
+    text-decoration: none;
+}
+.nav-list-item {
+    list-style: none;
 }
