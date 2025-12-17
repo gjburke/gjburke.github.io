@@ -1,7 +1,7 @@
 ---
 layout: entry
 title: Maybe It's a Week Instead
-date: 6/27/2025
+date_created: 6/27/2025
 ---
 
 It's a Friday night, I'm feeling a little inspired...

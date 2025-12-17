@@ -1,8 +1,8 @@
 ---
 layout: note
-title: TPP
-note_title: The Pragmatic Programmer 
+title: The Pragmatic Programmer
 author: David Thomas and Andrew Hunt 
+type: book
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna elit, hendrerit in tortor tristique, iaculis consectetur libero. Phasellus facilisis risus non tellus tempor, eget sodales quam lacinia. Integer vel aliquam lectus, vitae volutpat sem. Pellentesque fermentum dignissim mattis. Fusce in arcu ac massa elementum porta. Vivamus ut eleifend velit, vitae feugiat nulla. Sed non finibus ipsum. Aenean et augue sed nunc ornare luctus. Fusce massa risus, sagittis quis pretium vel, porta non massa. Nullam interdum tortor feugiat porta tincidunt.
