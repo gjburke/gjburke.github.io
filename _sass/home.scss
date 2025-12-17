@@ -1,20 +1,16 @@
 /* OVERALL HOMEPAGE */
 
-.home-container {
-    margin-top: 20px;
-}
-
-/* Intro section */
-
-#resume-container {
+/* Welcome intro */
+#head-section {
     display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 
-#resumes {
-    display: flex;
-    flex: auto;
-    justify-content: space-evenly;
+#picture {
+    float: right;
+    margin: 20px 20px 20px 20px;
+    align-content: center;
 }
 
 /* Current work section */
@@ -48,6 +44,7 @@
 /* List of different topics */
 #topics-list {
     list-style-type: none;
+    padding: 0px 20px 0px 20px;
 }
 
 #topics-list > li {
@@ -61,4 +58,17 @@
 
 #topics-list > li > a:hover {
     text-decoration: underline;
+}
+
+/* Resumes */
+
+#resume-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#resumes {
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
 }

@@ -1,11 +1,17 @@
 /* Header Title */
 
+.header-content {
+    padding: 5px;
+}
+
 .header-content > h1 {
     font-size: 28px;
+    margin-right: 10px;
 }
 
 .header-content > h2 {
     font-size: 18px;
+    margin-left: 10px;
 }
 
 /* Back Button */

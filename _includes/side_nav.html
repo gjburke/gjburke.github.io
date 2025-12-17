@@ -1,0 +1,10 @@
+<div class="nav-list-container">
+    <a href="/" {% if page.url == "/" %} class="nav-list-text current" {% else %} class="nav-list-text" {% endif %}>Home</a>
+    <ul class="nav-list">
+    {% for item in site.data.navigation %}
+        <li class="nav-list-item">
+            <a href="{{ item.link }}" {% if page.url == item.link %} class="nav-list-text current" {% else %} class="nav-list-text" {% endif %}>{{ item.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
