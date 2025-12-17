@@ -1,7 +1,7 @@
 ---
 layout: entry
 title: Getting Back Into It...
-date_created: 7/20/2025
+date: 2025-7-20
 ---
 
 Like I said on my journal in the note-transer GitHub, I really forgot how much I liked building things.

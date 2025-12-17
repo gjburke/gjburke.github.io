@@ -15,8 +15,9 @@ title: Notes
     <section>
     <h2>Journal</h2>
         <ul class="journal-entries">
-            {% for entry in site.journal reversed %} 
-                <li><a href="{{ entry.url }}">{{ entry.date_created }} - {{ entry.title }} </a></li>
+            {% assign sorted_entries = site.journal | sort: "date" | reverse %}
+            {% for entry in sorted_entries %} 
+                <li><a href="{{ entry.url }}">{{ entry.date | date: "%-m/%-d/%Y"}} - {{ entry.title }} </a></li>
             {% endfor %}
         </ul>
     </section>

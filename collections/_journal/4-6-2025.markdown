@@ -1,7 +1,7 @@
 ---
 layout: entry
 title: I Will Use This One Day
-date_created: 4/6/2025
+date: 2025-4-6
 ---
 
 Just updated the front page and about page. Realizing I haven't touched this in three months to I included a disclaimer about how long it has been since its been edited. Even though I'm not really advertising this site anywhere, don't ever want to put something out that is this sloppy too often.

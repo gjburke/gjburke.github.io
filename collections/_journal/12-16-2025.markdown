@@ -1,7 +1,7 @@
 ---
 layout: entry
 title: Idea of Transparency Through the Process
-date: 12/16/2025
+date: 2025-12-16
 ---
 
 Finally done with my semeseter. Looking forward to the next, but in the meantime I

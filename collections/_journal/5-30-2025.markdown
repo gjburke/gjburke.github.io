@@ -1,7 +1,7 @@
 ---
 layout: entry
 title: The Day is (Hopefully) Soon
-date_created: 5/30/2025
+date: 2025-5-30
 ---
 
 By this weekend I should be able to update this site, get it to where I want it,

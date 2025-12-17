@@ -1,7 +1,7 @@
 ---
 layout: entry
 title: We're Getting There...
-date_created: 7/13/2025
+date: 2025-7-13
 ---
 
 Just got back into my personal project - things are looking pretty promising! The model is pretty decent base-wise, and I think I'll be able to work with it. Segmentation might be interesting, but I feel like training it might be pretty easy. We'll see though. I write most of the deatils about that on the GitHub projects page, so [look over there](https://github.com/gjburke/note-transfer) for that project.
