@@ -5,6 +5,22 @@ html {
 
 /* Overall Body */
 
+:root {
+    /* Light Mode Colors (Default) */
+    --bg-color: #FAFAFA
+    --text-color: #141414;
+    --link-color: #0056B3;
+}
+  
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark Mode Colors */
+        --bg-color: #141212;
+        --text-color: #D1D1D1;
+        --link-color: #79BAC1;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -14,12 +30,18 @@ body {
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 .content {
     align-self: center;
     width: 600px;
     margin-top: 40px;
+}
+
+a {
+    color: var(--link-color);
 }
 
 /* Header */
@@ -57,7 +79,7 @@ header {
     padding-left: 0px;
 }
 .nav-list-text {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 .nav-list-item {
