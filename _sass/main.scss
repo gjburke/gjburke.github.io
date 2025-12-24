@@ -56,6 +56,10 @@
         font-size: larger;
         font-style: italic;
     }
+    .nav-list-text {
+        display: block;
+        width: auto;
+    }
 }
 
 @media (max-width: 666px) {
