@@ -1,3 +1,5 @@
+<input type="checkbox" id="menu-toggler" class="nav-button">
+<label for="menu-toggler" id="menu-button" class="nav-button">Navigation &#8628;</label>
 <div class="nav-list-container">
     <a href="/" {% if page.url == "/" %} class="nav-list-text current" {% else %} class="nav-list-text" {% endif %}>Home</a>
     <ul class="nav-list">
@@ -8,3 +10,4 @@
     {% endfor %}
     </ul>
 </div>
+<hr class="nav-separator">

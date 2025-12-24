@@ -2,36 +2,15 @@
 
 .header-content {
     padding: 5px;
-}
-
-.header-content > h1 {
-    font-size: 36px;
-    margin-right: 10px;
+    display: flex;
+    align-content: space-between;
+    gap: 20px;
 }
 
 .header-content > a {
-    font-size: 18px;
     font-style: italic;
     text-decoration: none;
-    margin-left: 10px;
 }
-
-/* Back Button */
-.control-button {
-    padding: 1px 6px;
-    border: 2px outset buttonborder;
-    border-radius: 3px;
-    color: buttontext;
-    background-color: buttonface;
-    text-decoration: none;
-}
-.bottom-button-wrapper {
-    position: fixed;
-    left: 50%;
-    bottom: 10px;
-    transform: translate(-50%);
-}
-
 
 /* Main content */
 
