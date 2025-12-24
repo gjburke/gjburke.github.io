@@ -7,7 +7,7 @@ html {
 
 :root {
     /* Light Mode Colors (Default) */
-    --bg-color: #FAFAFA
+    --bg-color: #FAFAFA;
     --text-color: #141414;
     --link-color: #0056B3;
 }
@@ -40,6 +40,21 @@ body {
     margin-top: 40px;
 }
 
+@media (max-width: 666px) {
+    .content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .content {
+        font-size: 14px;
+    }
+}
+
 a {
     color: var(--link-color);
 }
@@ -65,23 +80,4 @@ header {
 
 .header-content > * {
     margin: 0;
-}
-
-/* Side Nav */
-.nav-list-container {
-    position: sticky;
-    top: 75px;
-    height: 0px;
-    margin-left: -150px;
-    font-size: 1.25em;
-}
-.nav-list {
-    padding-left: 0px;
-}
-.nav-list-text {
-    color: var(--text-color);
-    text-decoration: none;
-}
-.nav-list-item {
-    list-style: none;
 }

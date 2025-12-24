@@ -2,37 +2,10 @@
 
 .header-content {
     padding: 5px;
+    display: flex;
+    align-content: space-between;
+    gap: 20px;
 }
-
-.header-content > h1 {
-    font-size: 28px;
-    margin-right: 10px;
-}
-
-.header-content > h2 {
-    font-size: 18px;
-    margin-left: 10px;
-}
-
-/* Top Button */
-.control-button {
-    padding: 1px 6px;
-    border: 2px outset buttonborder;
-    border-radius: 3px;
-    color: buttontext;
-    background-color: buttonface;
-    text-decoration: none;
-}
-.bottom-button-wrapper {
-    position: fixed;
-    left: 50%;
-    bottom: 10px;
-    transform: translate(-50%);
-    //background: lightgrey;
-    //padding: 5px 2px 5px 2px; 
-    //border-radius: 5px;
-}
-
 
 /* Main content */
 
@@ -43,5 +16,7 @@
 /* Markdown Styling */
 
 img {
-    height: 200px;
+    height: auto;
+    max-height: 200px;
+    max-width: 100%;
 }
