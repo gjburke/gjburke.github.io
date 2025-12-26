@@ -3,7 +3,16 @@ layout: project
 name: note-transfer
 description: Handwritten notes to formatted markdown
 link: github.com/gjburke/note-transfer
-logo: /assets/images/project-logos/note-transfer.png
+logo: /assets/images/for-projects/note-transfer/note-transfer.png
+stack: 
+ - Python
+ - FastAPI
+ - Ultralytics
+ - HuggingFace
+concepts:
+ - Computer Vision
+ - AI Pipelines
+ - API Development
 number: 2
 ---
 
@@ -73,18 +82,18 @@ number: 2
         textual functions (text vs bullet). 
     </p>
     <ol>
-        <li>
+        <li><p>
             <strong>YOLOv11-OBB</strong> - We use Ultralytic's oriented bounding box model
             to identify the main sections of the page while accounting for different skews and rotations
             that could appear during scanning. With these, we are able to section off
             the page into small enough chunks for our by-line model.
-        </li>
-        <li>
+        </p></li>
+        <li><p>
             <strong>YOLOv11</strong> - We use Ultralytic's detection model to segment and classify 
             the different types of text by-line. This includes bounding text, unordered bullets, and ordered bullets
             (will be expanded into figures as well). From this, we now have lines of text that
             feed well into our text recognition model.
-        </li>
+        </p></li>
     </ol>
     <h2>Parsing Document Structure</h2>
     <p>
@@ -95,21 +104,21 @@ number: 2
         So right now, I'll focus on the two main steps:
     </p>
     <ol>
-        <li>
+        <li><p>
             <strong>Sections</strong> - The most important part here is the horizontal alignment.
             Here, we use DBSCAN to determine the indentation groups of each of the sections.
             If two sections are in the same group, they are the same depth in the tree.
             Right now, the header vs section doesn't necessarily mean that the header is a parent,
             only if it's less indented than the section does that work.
-        </li>
-        <li>
+        </p></li>
+        <li><p>
             <strong>Lines</strong> - It combines both vertical pair-finding and horizontal group-finding,
             along with some class-based logic. The parent of a line is whatever section it is in.
             The vertical pair-finding is done to pair bullets and text on the same line, and the horizontal
             grouping is similar to the section parsing. With that information, we are able to parse text
             as children of their bullet points if needed. Basically, all classes except text are organizational,
             and text is the only one that holds any... text.
-        </li>
+        </p></li>
     </ol>
     <h2>Recognition</h2>
     <p>

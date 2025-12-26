@@ -34,6 +34,14 @@ body {
     background-color: var(--bg-color);
 }
 
+p {
+    line-height: 1.5;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
 .content {
     align-self: center;
     width: 600px;
@@ -48,10 +56,10 @@ body {
 
 @media (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 16px;
     }
     .content {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
