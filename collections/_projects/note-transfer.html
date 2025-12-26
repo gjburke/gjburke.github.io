@@ -10,10 +10,10 @@ number: 2
 <p> 
     <strong>Update as of 12/26/2025:</strong> This project is still in progress.
     I started it in May 2025 and have worked on it when I have the bandwidth since then.
-    I'm looking to have a working, barebones version by the end of January 2026.
+    I'm looking to have a working version by the end of January 2026.
 </p>
 <section>
-    <h2>Overview</h2>
+    <h1>Overview</h1>
     <p>
         The note transfer tool is being built to parse written notes into a text tree,
         allowing for digitization and export into formats such as markdown and html.
@@ -26,9 +26,110 @@ number: 2
         <strong>Technologies:</strong> Python, FastAPI, Ultralytics, HuggingFace, Svelte, TailwindCSS
     </p>
     <p>
-        <strong>Concepts:</strong> Computer Vision, Data Pipelines, Document Parsing, API Development
+        <strong>Concepts:</strong> Computer Vision, Artificial Intelligence Pipelines, API Development
     </p>
 </section>
 <section>
-    <h2>Reflection</h2>
+    <h1>Takeaways</h1>
+    <p>
+        Although this project is not done yet, I still feel like I have gained a lot of experience.
+        Mainly, I've been learning all of the considerations that go into building a robust system of
+        Machine Learning models and Artificial Intelligence.
+    </p>
+    <p>
+        Each model has its own needs for preprocessing, labeling, training, and utilization.
+        It is an interesting problem making sure that these are all balanced properly, 
+        with each model staying within their bounds of practicality so that each can be utilized to the fullest.
+        For example, I recently retrained my segmentation models to stop trying to handle the
+        alignment of the segmentations since it was "out of scope" for them. Instead, I shifted that
+        to my segment parsing logic, allowing me to more precisely control how I parse a document
+        rather than leaving it up to a model. I'm sure I'll encounter more tradeoffs like
+        this as I continue to work on this project.
+    </p>
+    <p>
+        Once I have a basic system built out, I'll have many opportunities to improve it, which is exciting!
+        I have a few paths that will allow me to explore further into different ML techniques:
+    </p>
+    <ul>
+        <li>Fine-tuning on top of Microsoft's TrOCR model with my own hand-writing</li>
+        <li>Expanding parsing capabilities to much more complex document styles and organizations</li>
+        <li>Building a system so anyone can fine-tune the segmentation or detection</li>
+    </ul>
+    <p>
+        There's many opportunities to keep building this out, maybe as a sister-project as well.
+        So with some time available, I'll be able to keep learning through this project.
+    </p>
+</section>
+<section>
+    <h1>Approach</h1>
+    <p>
+        This is still under development and is subject to change,
+        but for now I'll describe the main steps for how I'll be parsing the scanned notes.
+    </p>
+    <h2>Segmentation</h2>
+    <p>
+        The pipeline starts with page segmentation, which segments off the different sections
+        of the document (header vs content) and then segments the lines into their
+        textual functions (text vs bullet). 
+    </p>
+    <ol>
+        <li>
+            <strong>YOLOv11-OBB</strong> - We use Ultralytic's oriented bounding box model
+            to identify the main sections of the page while accounting for different skews and rotations
+            that could appear during scanning. With these, we are able to section off
+            the page into small enough chunks for our by-line model.
+        </li>
+        <li>
+            <strong>YOLOv11</strong> - We use Ultralytic's detection model to segment and classify 
+            the different types of text by-line. This includes bounding text, unordered bullets, and ordered bullets
+            (will be expanded into figures as well). From this, we now have lines of text that
+            feed well into our text recognition model.
+        </li>
+    </ol>
+    <h2>Parsing Document Structure</h2>
+    <p>
+        As we segment everything by line, we save each of the segmentations and their class.
+        Once all the pages have been segmented, we can determine the overall tree-like structure of the document
+        utilizing their relative positions. There's a lot of rules and philosophy that goes into
+        how we might parse these, and they are definitely subject to change, especially as documents get more complex.
+        So right now, I'll focus on the two main steps:
+    </p>
+    <ol>
+        <li>
+            <strong>Sections</strong> - The most important part here is the horizontal alignment.
+            Here, we use DBSCAN to determine the indentation groups of each of the sections.
+            If two sections are in the same group, they are the same depth in the tree.
+            Right now, the header vs section doesn't necessarily mean that the header is a parent,
+            only if it's less indented than the section does that work.
+        </li>
+        <li>
+            <strong>Lines</strong> - It combines both vertical pair-finding and horizontal group-finding,
+            along with some class-based logic. The parent of a line is whatever section it is in.
+            The vertical pair-finding is done to pair bullets and text on the same line, and the horizontal
+            grouping is similar to the section parsing. With that information, we are able to parse text
+            as children of their bullet points if needed. Basically, all classes except text are organizational,
+            and text is the only one that holds any... text.
+        </li>
+    </ol>
+    <h2>Recognition</h2>
+    <p>
+        This part was only really tested early on when looking at the viability of this app.
+        I don't exactly know where this will be in the pipeline, but it should be a bit more simple than
+        the segmentation and parsing. This is what I'm planning on it looking like:
+    </p>
+    <ol>
+        <li>
+            <strong>Preprocessing</strong> - Running some filters and increasing contrast to get the text as clear as possible.
+        </li>
+        <li>
+            <strong>Predicting</strong> - Will run it on the TrOCR model, get the results. There may be possibility of adding prior context,
+            additional training, and other improvements that can help.
+        </li>
+    </ol>
+    <h2>Conversion</h2>
+    <p>
+        I haven't really gotten into the details of planning this yet, but I do have an idea.
+        Since we have a tree structure, I should be able to write an in-order traversal of that tree
+        that uses some pretty basic class and tree-depth logic to style the text a certain way.
+    </p>
 </section>
