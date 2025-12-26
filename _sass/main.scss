@@ -3,11 +3,6 @@
 .nav-button {
     display: none;
 }
-/* Navigation */
-
-.nav-button {
-    display: none;
-}
 
 .current {
     text-decoration: underline !important;
@@ -82,9 +77,7 @@
 }
 .nav-list-item {
     list-style: none;
-}
-.nav-list-item {
-    list-style: none;
+    margin-bottom: revert;
 }
 
 /* For the main content */
