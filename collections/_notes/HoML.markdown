@@ -218,15 +218,15 @@ Precision/Recall Tradeoff
 
 - Increasing precision reduces recall, and vice versa
 - kind of looks like this:
-  - ![Threshold vs. PR values graph](\assets\images\for-notes\pr-threshold.png)
+  - ![Threshold vs. PR values graph](\assets\images\for-notes\homl\pr-threshold.png)
 - Or with a PR Curve, where we want to be close to the top right
-  - ![PR Curve](\assets\images\for-notes\pr-curve.png)
+  - ![PR Curve](\assets\images\for-notes\homl\pr-curve.png)
 
 The ROC Curve
 
 - Similar to the PR Curve, but plots true positive rate against the false positive rate
 - True positive = recall/sensitivity, false positive = 1 - TNR = specificity
-- ![ROC Curve](\assets\images\for-notes\roc-curve.png)
+- ![ROC Curve](\assets\images\for-notes\homl\roc-curve.png)
   - want it to be as close to top left as possible
 
 When choosing, we prefer PR when positive class is rare or when you care more about false positive than false negatives, and ROC curve otherwise.
@@ -316,7 +316,7 @@ Properties
 
 This one is a healthy cross between both stochastic and batch gradient descent. It does batch gradient descent on a smaller sets of parameters each step.
 
-![Table Comparing Linear Regression Algroithms](\assets\images\for-notes\regression-table.png)
+![Table Comparing Linear Regression Algroithms](\assets\images\for-notes\homl\regression-table.png)
 
 ## Polynomial Regression
 
@@ -327,9 +327,9 @@ This one is a healthy cross between both stochastic and batch gradient descent. 
 Can look at learning curves to test over/under fitting. They plot the training set size and resulting cost of the trained model.
 
 - Underfitting curve: both (validation and training) cost values have reached a plateau, but they are close and pretty high 
-  - ![Underfitting Curve](\assets\images\for-notes\underfit-curve.png)
+  - ![Underfitting Curve](\assets\images\for-notes\homl\underfit-curve.png)
 - Overfitting curve: the training cost value is much much lower than the validation cost value, there is a big gap
-  - ![Overfitting Curve](\assets\images\for-notes\overfit-curve.png)
+  - ![Overfitting Curve](\assets\images\for-notes\homl\overfit-curve.png)
 
 The Bias Tradeoff - generalization error can be expressed as a sum of three errors:
 
@@ -394,7 +394,7 @@ An SVM is capable of doing linear or nonlinear classification, regression, and e
 
 ## Linear SVM Classification
 
-![Graphical representation of two-class svm model](\assets\images\for-notes\svm-graph.png)
+![Graphical representation of two-class svm model](\assets\images\for-notes\homl\svm-graph.png)
 
 - think of it as "fitting the widest possible street" between classes
 - the decision boundary is fully determined by the points on teh boundary, these are the "support vectors"
@@ -441,7 +441,7 @@ An SVM is capable of doing linear or nonlinear classification, regression, and e
 2. Try GRBF if the dataset or features are not too large to be a limiting factor
 3. Then you can go to others, (like polynomial)
 
-![Table of different SVM functions and deatils about them](\assets\images\for-notes\svm-table.png)
+![Table of different SVM functions and deatils about them](\assets\images\for-notes\homl\svm-table.png)
 
 ## SVM Regression
 
@@ -503,7 +503,7 @@ This can also be used for regression, but it gives a kind of step-wise function 
 
 - this type of model is particularly unstable, especially to data transformations
 - for example: the boundaries with decision trees are orthogonal, so if you rotate a dataset, you may get a jagged edge
-  - ![Jagged decision tree](\assets\images\for-notes\jagged-graph.png)
+  - ![Jagged decision tree](\assets\images\for-notes\homl\jagged-graph.png)
 - it is also sensitive to small variations in training data
 
 # Ensemble Learning and Random Forests

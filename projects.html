@@ -15,7 +15,8 @@ title: Projects
     <section>
         <h2>Projects</h2>
         <ul class="project-ul">
-            {% for project in site.projects %}
+            {% assign sorted_projects = site.projects | sort: "number" | reverse %}
+            {% for project in sorted_projects %}
                 <li class="project-li">
                     <a href="{{ project.url }}">
                         <div>

@@ -4,34 +4,31 @@ name: note-transfer
 description: Handwritten notes to formatted markdown
 link: github.com/gjburke/note-transfer
 logo: /assets/images/project-logos/note-transfer.png
+number: 2
 ---
 
-<p>WIP: We are transferring notes</p>
-
+<p> 
+    <strong>Update as of 12/26/2025:</strong> This project is still in progress.
+    I started it in May 2025 and have worked on it when I have the bandwidth since then.
+    I'm looking to have a working, barebones version by the end of January 2026.
+</p>
 <section>
-    <h2>Update as of 6/27/25</h2>
+    <h2>Overview</h2>
     <p>
-        I'm trying to allocate some time to get this done. I think
-        at least on the weekends I should be good. I'm sort of balancing
-        three different responsibilities with CAing, Research, and KWF right now,
-        which all together are feeling like a full time position. So I'm finding time. 
-        Cause this is a cool project!
+        The note transfer tool is being built to parse written notes into a text tree,
+        allowing for digitization and export into formats such as markdown and html.
+        It uses Ultralytics's YOLO detection models for structure recognition
+        and Microsoft's TrOCR model for text recognition.
+        Through a simple interface built with Svelte, TypeScript, and TailwindCSS,
+        users will be able to upload their scanned documents and convert them to a structured document.
     </p>
     <p>
-        Right now I've made a very rudimentary version, that just reads
-        the text off of given images using a pretrained model off HuggingFace.
-        Super simple, and not very useful. I want to figure how to expand this,
-        since there's different ways I could go. Like:
+        <strong>Technologies:</strong> Python, FastAPI, Ultralytics, HuggingFace, Svelte, TailwindCSS
     </p>
-    <ul>
-        <li>Adding support for PDF uploads, splitting into images</li>
-        <li>Training the model on my handwriting (and eventually custom training)</li>
-    </ul>
     <p>
-        And obviously down the road I'd be adding segmentation of the pages
-        in order to format it correctly, better interactivity with reordering of pages,
-        editting, etc, and more ideas. But we'll see where this project takes me.
-        Overall, just hoping to get some time to it on the weekends/weeknights,
-        and see what I can build.
+        <strong>Concepts:</strong> Computer Vision, Data Pipelines, Document Parsing, API Development
     </p>
+</section>
+<section>
+    <h2>Reflection</h2>
 </section>
