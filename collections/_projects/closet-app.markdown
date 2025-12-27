@@ -3,7 +3,7 @@ layout: project
 name: closet-app
 description: Mobile app for storing clothing and picking outfits digitally
 link: github.com/gjburke/closet-app
-logo: /assets/images/for-projects/closet-app/logo.png
+logo: /assets/images/for-projects/closet-app/logo.svg
 stack: 
  - React Native
  - React Redux Toolkit
@@ -18,6 +18,8 @@ number: 2
 # Overview
 
 The closet app that I was building is meant to be a mobile app that stores your clothes and allows you to create and visualize outfits on your phone. It's build using React with Typescript, with state management using React Redux Toolkit.
+
+This was my first real experience with "web" (or web adjacent) development that wasn't just straight HTML/CSS/JS. It taught me a lot about all the considerations that go into even a fairly simple application, giving me experience with tools and concepts that I've used many times after.
 
 **Technologies:** React Native, React Redux Toolkit, TypeScript
 
