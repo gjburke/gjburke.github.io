@@ -44,9 +44,15 @@
 .project-li > a > div > * {
     margin: 0;
     padding: 0;
+    line-height: 1.25;
+}
+
+.project-li > a > div > h3 {
+    margin-bottom: 5px;
 }
 
 .project-li > a > img {
     height: 90px;
+    width: 90px;
     padding: 5px;
 }

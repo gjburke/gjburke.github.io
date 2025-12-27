@@ -1,12 +1,12 @@
 - name: Projects
   link: /projects.html
-  description: Has showcases, documentation, behind-the-scenes for what I'm working on.
+  description: Has overviews, details, and thoughts on what I'm working on.
 - name: Notes
   link: /notes.html
   description: Meant to be a collection of my notes on what I've learned, whether it be in school, books I've read, or videos I've watched.
 - name: Journal
   link: /journal.html
-  description: This is where my thoughts and daily ramblings go. I'm hoping it will help me reflect on my learning, helping me grow better.
+  description: This is where my thoughts and ramblings go. I'm hoping it will help me reflect on my learning, helping me grow better.
 - name: About
   link: /about.html
   description: Just a good-ole-fashioned about me. Hoping to show my interests, aspirations, that I care. That sort of thing.
