@@ -1,0 +1,17 @@
+---
+layout: entry
+title: The Craft of Documentation
+date: 2025-12-29
+---
+
+This week I'm focusing on documentation for two of my projects. And as creating any documentation usually is, I wish I would've had this in mind sooner.
+
+On my research, I'm stuck rooting through many different files and chat messages between me and my advisor, trying to piece together the function and purpose of my code. If I had just made a document or explanation of that code when I made it, it would be as simple as piecing them together. And If I had kept an overall document that told the whole story from the start, I wouldn't be piecing things together and deciding how to present it now. But hindsight is 20-20, as they say.
+
+With Kashmir World Foundation, it's a similar problem with a separate motivation. Instead of just going toward a research paper (which it still may end up doing) it's more for the people who have not been a part of the work we've done. That includes both all the other teams I'm working with, as well as all the future interns (including our future selves) that don't have as much context about the project as we do now. So that poses some different focuses, different challenges.
+
+Its interesting how documentation can serve these different purposes, even though at the core it would seem the same. It makes me think back to language and composition class: analyzing the author, the audience, the argument. Younger me would've discounted those concepts in applications to programming. "I like math and code because it has a clear cut answer". Yeah right. And now, even realizing that these literary skills are core to what I'll do in the future, I haven't internalized it as much as those who have worked with it. There's much more to learn once I have to deal with this in a corporate situation.
+
+The literary aspect of documentation initially made me consider it as some form of art, with engineers needing to communicate some sort of story or message, like an author would. You can hone it as a skill as well. But it is definitely not meant for expression of the author, or to communicate a message about some human condition. And in that vein, I see documentation as more of a craft. Although there is some "art" in it, as there may be in a carpenter's chair, documentation's main purpose is to communicate what it needs to about the piece of code/software, as the chair is to be sat on.
+
+Maybe I'm looking to much into what is essentially just making sure you have effective communication to future selves. But documentation is definitely a skill that I'd like to hone a little bit more. There's something beautiful in clarity. 
