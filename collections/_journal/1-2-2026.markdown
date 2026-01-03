@@ -1,0 +1,56 @@
+---
+layout: entry
+title: On the Impact of LLMs - My Profession
+date: 2026-1-2
+---
+
+Happy New Year! And with the New Year, comes an increased pondering about the future.
+
+There are three main things that I saw today that have spurred this note:
+
+1. A tiktok by Nate B Jones detailing his opinion that you should not be fine-tuning models, that the raw models now can do what you want to fine tune it for, just with proper guardrails. My subsequent testing of note parsing by ChatGPT (whatever free tier they give) and realizing it's able to one-shot my whole personal project's functionality better than mine would at the end of this break.
+2. A tiktok by a user named Clue Codes which detailed his predictions about how LLMs would impact the future of software engineering, and how it would most likely shift away from the coding and systems and more toward the communication and decision making on the product.
+3. A youtube video by Sylvan Franklin talking about how in this day and age, being able to delve deep and retain information is more important than the skill of finding knowledge.
+
+Each of this illustrate different aspects of the possible changes that generative artificial intelligence is going to make to my life, and many others. They made me consider how this technology will most likely drastically change my learning, my work, and my future relationships with them.
+
+Here's my current relationship with CS as a profession:
+
+I believe that a core foundation of what drives me is learning. Right now, it seems like the main drive: I'm in my college years, I'm not fully working yet, I'm in my prime to focus on absorbing and experiencing as much as possible. Because even when you are learning through experience, when you really have to work on something and get it done, it's so easy to sacrifice the time to learn everything you can from it in order to make that product more efficiently.
+
+When building something, learning is not always the forefront necessity though. That is where "impact" comes in as a secondary motivator. I haven't really defined this one yet. But if the work has "soul", or at least not soulless, that helps with motivation. Along the same vein, if there's some sort of purpose that I can see, like my note transfer app.
+
+But with LLM's ability to increase the "speed of impact", this creates tension:
+
+I'd love to be able to be a "100x Engineer" with LLMs and just pump out impactful projects with these powerful tools and models at my disposal. GenAI can be used to tackle problems we haven't able to solve before at speeds we haven't been able to go at before.
+
+But with all of this speed, there seems to be no time to learn. When every day can be a sprint at speeds we've never seen before, it doesn't seem like there's time for weight training, or recovery. Being enabled to produce at such efficiency comparatively makes the labor of learning seem like an inefficient use of my time.
+
+So where does that leave me?
+
+I'm really not sure yet. People seem to assume there will be a human in the loop, but there's no guarantee for that. Self-driving cars crash less than humans, who's to say these coding models won't start making less mistakes?
+
+If it does come to be that these GenAI models become better SWEs (I'm talking coding, documenting, tool using, system-designing, everything) that I ever could dream of, then what? Am I relegated to not getting use out of anything I've learned in my field? To having to learn to manage these models, communicate with customers, write up requirements?
+
+Are we all destined to be product managers? God, I hope not.
+
+But therein lies the turmoil. If I can call a model that knows better than I do on all things I'm interested in, why would I learn anything related to my work except for how to use that model? Only that it would be completely abandoning my current driving principle for why I do what I do, why I'm doing Computer Science. Because I want to learn about it!
+
+And I know, I know I'm still technically "learning" how to use the model. But let's be honest: would I rather be learning how to create something in code, or learning how to best convey the customer's needs to a model? I think we know the answer.
+
+But... things are changing quickly, and I guess I'll have to keep up before I get left behind.
+
+This is where future me is supposed to come in. What can I do to make sure I don't get left behind? Well, here's a few things off the top of my head:
+
+- Build while utilizing GenAI. Get good at it. Having these tools at your disposal, being able to build applications with ease, will be very helpful. (Running your own toolbox locally? Would be cool)
+- Keep up to date with these powerful tools, stacks, etc. Hopefully at least a little on the "cutting edge". (You've got a while to go... and it keeps going)
+- Get into research regarding GenAI. Both models and systems surrounding them.
+- Read more: documentation, code, papers, books. Focus on learning with depth and nuance, shallow skills are easily imitated.
+
+Lord knows that there's many more things I could be doing, many more to take. I still feel very new to much of computer science, so hopefully I can gain a better perspective. I'll have to look at this question, and whole topic more. It feels almost existential. 
+
+I guess you take your beliefs and motivations for granted until they're challenged. The concern of having them misshapen is... much more present now. And it makes me grateful that I have them, that I have this passion to follow. 
+
+Good Luck,
+
+Griffin
