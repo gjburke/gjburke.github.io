@@ -1,0 +1,37 @@
+---
+layout: entry
+title: Agency, Curiosity, and History
+date: 2025-1-20
+---
+
+I've had an interesting day today, especially relating in my pursuit of agency and result of reading more. 
+
+In the past, I haven't been one to really enjoy consuming much "casual" related to ML/AI. That being informational videos, commentary video, what have you. I'm not too sure where that stems from at the moment. Maybe wanting to separate work and entertainment.
+
+But recently, especially as I feel as though I need to get "involved in the community" more, I've been casually consuming ML/AI-related content on various platforms. I tend to lean toward more educational/informational content, whether it be news or commentary or thought pieces.
+
+But, most of those ways of consuming content have mostly been passive. These people appear in one of my feeds, and I consume their content. I'm not actively looking for new information, and if I don't get served their content, I lose their perspective for that time. 
+
+That's why today has been a little different. This was the first time in a while, which is a bit concerning, that I:
+
+1. Heard something interesting
+2. Thought to myself that I should learn more about it
+3. Looked the thing up later in the day and read about it
+
+I was in my first class of Deep Learning in Computer Vision, and we were going over some basic history of image recognition. Professor Lazebnik went over ImageNet and the breakthrough AlexNet model, essentially the foundations of her class. And I hadn't heard of it before, even though I use YOLO, a child of that foundation. So, I made sure to write those down in my notebook, since I felt I needed to learn more about them. Later in the day, I had the time to research more about them, and get some context on the field that I'm going to be studying.
+
+Now, I know that *researching my interests* is something that should really be innate/foundational. But somewhere along the line I've essentially lost this, exploring my curiosity (and I think many others may not have this as much as they think). I think regaining my agency to be curious and **explore that curiosity** is the first step to really furthering my knowledge and education in this field (and many others as well).
+
+What I found in exploring this curiosity was context within (the noticeably recent) history of deep learning for computer vision. This type of historical context is extremely valuable I realize, not only to appreciate the work that has been done to get to this point, but to also situate myself for the future.
+
+For example, the idea that learning *wasn't* considered a viable option for machine learning approaches was extremely novel to me. Now some you who've been around might scoff at that, but I was 9 when AlexNet was released. All I've known for advanced artificial intelligence has been learning. But this knowledge of the past provides a small piece that begins to illuminate the vast context that comes with artificial intelligence and machine learning.
+
+I find myself lucky though, in this field of AI and ML and DS and Generative Models, that this history is relatively recent and happening at a blazing pace. Many of the large, important discoveries made so far seem to have been made in my (or at least my parent's) lifetime. And not many histories can say the same.
+
+This provides me with a unqiue opportunity to not only explore deeply into this history (thanks to the internet, modern computational history is largely documented online) but also learn about and explore it *while its happening*. I was in middle school when "Attention Is All You Need" dropped, high school when ChatGPT rose to popularity, and college as agents are developed and new foundational models are released multiple times a year. I have a feeling the pace won't slow down if it can help it, so there are surely many more discoveries and applications to come. And if you're not excited about that, I don't know if you like this field!
+
+I feel very lucky and grateful to be interested in an industry that is truly moving. And with my curiosity and agency, I hope I can explore both the history of this and what is happening right now. Keeping up will be challenging, but that's what a growing mind needs.
+
+Best of luck to you,
+
+Griffin
