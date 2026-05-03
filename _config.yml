@@ -18,10 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Griffin's Stuff
-email: gjburke2@illinois.edu
+title: Griffin Burke
+email: gjburke2[at]illinois[dot]edu
+author: Griffin Burke
 description: >- # this means to ignore newlines until "baseurl:"
-  This is where I hopefully will eventually showcase all of my new stuff.
+  My personal site, still under construction.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: none
@@ -38,8 +39,10 @@ collections:
 
 # Build settings
 # theme: minima
-# plugins:
-#  - jekyll-feed
+plugins:
+ - jekyll-feed
+ - jekyll-sitemap
+ - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
