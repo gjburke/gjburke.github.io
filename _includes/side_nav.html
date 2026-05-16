@@ -1,12 +1,22 @@
 <input type="checkbox" id="menu-toggler" class="nav-button">
 <label for="menu-toggler" id="menu-button" class="nav-button">Navigation &#8628;</label>
 <div class="nav-list-container">
-    <a href="/" {% if page.url == "/" %} class="nav-list-text current" {% else %} class="nav-list-text" {% endif %}>Home</a>
+    {% if page.url == "/" %}
+    <a href="/" class="nav-list-text" id="current">Home</a>
+    {% else %}
+    <a href="/" class="nav-list-text">Home</a>
+    {% endif %}
     <ul class="nav-list">
     {% for item in site.data.navigation %}
+        {% if page.url == item.link %}
         <li class="nav-list-item">
-            <a href="{{ item.link }}" {% if page.url == item.link %} class="nav-list-text current" {% else %} class="nav-list-text" {% endif %}>{{ item.name }}</a>
+            <a href="{{ item.link }}" class="nav-list-text" id="current">* {{ item.name }}</a>
         </li>
+        {% else %}
+        <li class="nav-list-item">
+            <a href="{{ item.link }}" class="nav-list-text" >{{ item.name }}</a>
+        </li>
+        {% endif %}
     {% endfor %}
     </ul>
 </div>

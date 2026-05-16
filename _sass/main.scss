@@ -4,8 +4,8 @@
     display: none;
 }
 
-.current {
-    text-decoration: underline !important;
+#current {
+    color: var(--heading-color);
 }
 
 .nav-list-container {
@@ -70,6 +70,7 @@
 
 .nav-list {
     padding-left: 0px;
+    width: fit-content;
 }
 .nav-list-text {
     color: var(--text-color);
