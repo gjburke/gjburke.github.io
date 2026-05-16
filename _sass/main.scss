@@ -14,10 +14,23 @@
     height: 0px;
     margin-left: max(calc(338px - 50vw), -150px);
     font-size: 1.25em;
+    width: fit-content;
 }
 
 .nav-separator {
     display: none;
+}
+
+.nav-list {
+    padding-left: 0px;
+}
+.nav-list-text {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.nav-list-item {
+    list-style: none;
+    margin-bottom: revert;
 }
 
 @media (max-width: 880px) {
@@ -68,18 +81,6 @@
     }
 }
 
-.nav-list {
-    padding-left: 0px;
-    width: fit-content;
-}
-.nav-list-text {
-    color: var(--text-color);
-    text-decoration: none;
-}
-.nav-list-item {
-    list-style: none;
-    margin-bottom: revert;
-}
 
 /* For the main content */
 
