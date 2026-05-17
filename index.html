@@ -23,15 +23,14 @@ layout: default
     </section>
     <hr>
     <section>
-        <h2>My Site</h2>
         <p>
             This site is meant to be a hub of what I think about, learn, and create. 
             Right now, it's mainly focused on computer science, but who knows where life will take me.
         </p>
-        <p>Here's what is on this site:</p>
+        <p style="color: var(--muted-color);letter-spacing: 0.025em; font-size: 95%;">QUICK LOOK</p>
         <ul id="topics-list">
             {% for page in site.data.navigation %}
-                <li><a href="{{ page.link }}"><strong>{{ page.name }}</strong></a> - {{ page.description }}</li>
+                <li><a class="topics-list-arrow">-&gt;&nbsp;&nbsp;</a><a class="topics-list-text" href={{page.link}}>{{page.blurb}}</a></li>
             {% endfor %}
         </ul>
         <p id="resume-container">

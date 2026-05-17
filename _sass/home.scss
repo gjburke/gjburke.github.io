@@ -65,20 +65,20 @@
 
 /* List of different topics */
 #topics-list {
-    list-style-type: none;
-    padding: 0px 20px 0px 20px;
+    list-style: none;
+    padding: 0px 0px 0px 0px;
 }
 
-#topics-list > li {
-    margin-bottom: 10px;
+.topics-list-arrow {
+    color: var(--muted-color);
 }
 
-#topics-list > li > a {
+.topics-list-text {
     text-decoration: none;
     color: var(--text-color);
 }
 
-#topics-list > li > a:hover {
+.topics-list-text:hover {
     text-decoration: underline;
 }
 
