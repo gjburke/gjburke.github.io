@@ -17,7 +17,7 @@ html {
         --bg-color: #f8f5ee;
         --text-color: #221812;
         --link-color: #0056B3;
-        --heading-color: #070201;
+        --heading-color: #000000; // #070201;
         --muted-color: #635147;
         --accent-color: #d8ccbc;
     }
@@ -26,7 +26,7 @@ html {
 @media (prefers-color-scheme: dark) {
     /* Dark Mode Colors */
     :root {
-        --bg-color: #0d0b08;
+        --bg-color: #110f0c;
         --text-color: #c8c8c8;
         --link-color: #79BAC1;
         --heading-color: #ffffff;

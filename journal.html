@@ -17,7 +17,7 @@ title: Notes
         <ul class="journal-entries">
             {% assign sorted_entries = site.journal | sort: "date" | reverse %}
             {% for entry in sorted_entries %} 
-                <li><a href="{{ entry.url }}">{{ entry.date | date: "%-m/%-d/%Y"}} - {{ entry.title }} </a></li>
+                <li><a href="{{ entry.url }}">{{ entry.title }}</a><span>{{ entry.date | date: "%-m/%-d/%Y"}}</span></li>
             {% endfor %}
         </ul>
     </section>

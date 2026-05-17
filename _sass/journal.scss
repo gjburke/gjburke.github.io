@@ -2,8 +2,14 @@
 
 /* Notes list */
 
+.journal-entries {
+    padding: 0px 0px 0px 0px;
+}
+
 .journal-entries > li {
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 .journal-entries > li > a {
