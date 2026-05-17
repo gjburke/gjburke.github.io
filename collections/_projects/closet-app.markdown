@@ -10,6 +10,7 @@ stack:
  - TypeScript
 concepts:
  - Mobile Development
+year: 2025
 number: 2
 ---
 

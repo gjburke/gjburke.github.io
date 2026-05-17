@@ -13,6 +13,7 @@ concepts:
  - Machine Learning
  - Data Pipeline
  - API Utilization
+year: 2022
 number: 0
 ---
 

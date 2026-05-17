@@ -13,6 +13,7 @@ concepts:
  - Machine Learning
  - Neural Networks
  - Web Development
+year: 2024
 number: 1
 ---
 

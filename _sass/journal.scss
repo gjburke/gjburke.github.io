@@ -13,10 +13,15 @@
 }
 
 .journal-entries > li > a {
-    color: unset;
+    color: var(--text-color);
     text-decoration: none;
 }
 
 .journal-entries > li > a:hover {
     text-decoration: underline;
+}
+
+.journal-entries > li > span {
+    color: var(--muted-color);
+    font-size: smaller;
 }
