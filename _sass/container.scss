@@ -27,10 +27,10 @@ html {
     /* Dark Mode Colors */
     :root {
         --bg-color: #110f0c;
-        --text-color: #c8c8c8;
+        --text-color: #e0e0e0;
         --link-color: #79BAC1;
         --heading-color: #ffffff;
-        --muted-color: #787878;
+        --muted-color: #808080;
         --accent-color: #404040;
     }
 }
@@ -125,4 +125,12 @@ header {
 
 .header-content > * {
     margin: 0;
+}
+
+/* Special Headers */
+
+.subheading {
+    color: var(--muted-color);
+    letter-spacing: 0.025em;
+    font-size: 100%;
 }

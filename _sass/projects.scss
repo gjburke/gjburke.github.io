@@ -7,21 +7,35 @@
 }
 
 .project-li {
-    margin: 20px 0px 20px 0px;
+    margin: 30px 0px 30px 0px;
 }
 
 .project-header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    margin-bottom: -7px;
+}
+
+.project-card {
+  position: relative;
+  padding-left: 1.4em;
+  display: grid;
+  gap: 8px 24px;
+  margin: 20px, 0;
+}
+
+.project-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 1.5px;
 }
 
 .project-title {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.17em;
+    font-size: larger;
 }
 
 .project-title:hover {
@@ -31,14 +45,20 @@
 .project-date {
     color: var(--muted-color);
     font-size: smaller;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
 }
 
 .project-description {
-    margin: 5px 0px 5px 0px;
+    margin: 0;
+    margin-top: 5px;
 }
 
 .project-stack{
     color: var(--muted-color);
-    margin: 5px 0px 5px 0px;
+    margin: 0;
     font-size: smaller;
 }

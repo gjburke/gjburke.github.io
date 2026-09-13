@@ -14,11 +14,18 @@ title: Notes
     <hr>
     <section>
     <h2>Journal</h2>
-        <ul class="journal-entries">
-            {% assign sorted_entries = site.journal | sort: "date" | reverse %}
-            {% for entry in sorted_entries %} 
-                <li><a href="{{ entry.url }}">{{ entry.title }}</a><span>{{ entry.date | date: "%-m/%-d/%Y"}}</span></li>
-            {% endfor %}
-        </ul>
+        {% assign entries = site.journal | sort: "date" | reverse %}
+        {% assign years = entries | group_by_exp: "entry", "entry.date | date: '%Y'" | sort: "name" | reverse %}
+        
+        {% for year in years %}
+            <section>
+                <p class="subheading">| {{year.name}}</p>
+                <ul class="journal-entries">
+                    {% for entry in year.items %} 
+                        <li><a href="{{ entry.url }}">{{ entry.title }}</a><span>{{ entry.date | date: "%-m/%-d/%Y"}}</span></li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endfor %}
     </section>
 </div>
